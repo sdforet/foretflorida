@@ -1,8 +1,0 @@
-<tal:block metal:use-macro="decorator/base.xhtml/htmltop"></tal:block>
-<body>
-  <p>testing the base decorator</p>
-  <tal:block tal:condition="true: body">
-     <tal:block tal:content="structure body" />
-  </tal:block>
-</body>
-<tal:block metal:use-macro="decorator/base.xhtml/htmlbottom"></tal:block>
