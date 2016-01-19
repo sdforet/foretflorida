@@ -1,11 +1,10 @@
-z<?php
+<?php
 
 require_once "php-lib/PHPTAL.php";
 
-$page = new PHPTAL('templates/tal/decorator/base.xhtml');
+$page = new PHPTAL('templates/base.xhtml');
 $page->cleanUpCache();
-$page->myvar = "this is my variable";
-$page->body = 'body string';
+//$page->body = 'body string';
 
 echo $page->execute();
 ?>

@@ -10,6 +10,7 @@
    <body>
    <h3>Symfony</h3>
    <p>Test site, parking lot for domains and other testing systems, Symfony, PHPTAL, MySQL, etc.</p>
+   <a href="taltest.php">Visit the PHPTAL site</a>
    <!--
 
    -->
