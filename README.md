@@ -5,3 +5,7 @@ Assets:
 - bootstrap
 - jquery 2.2.0
 - phptal
+
+PHPTAL implmentation
+- template directory /templates/
+- Decorator extends DECTAL extends PHPTAL

@@ -3,10 +3,15 @@
     <head>
     </head>
     <body>
-        <p>testing the base decorator</p>
+        <p>
+            Decorator Header Content
+        </p>
+        <!-- tal inserts subtemplate content here -->
         <tal:block tal:condition="true: body">
             <tal:block tal:content="structure body" />
         </tal:block>
-        Return to the main <a href="index.php">index page</a>.
+        <p>
+            Decorator Footer Content.
+        </p>
     </body>
 </html>
