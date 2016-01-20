@@ -10,7 +10,7 @@
    <body>
    <h3>Parking Lot</h3>
    <p>Test site, parking lot for domains and other testing systems, Symfony, PHPTAL, MySQL, etc.</p>
-   <a href="taltest.php">Visit the PHPTAL site</a>
+   <a href="subtemplatetest.php">Visit the PHPTAL site</a>
    <!--
 
    -->
