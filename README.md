@@ -9,3 +9,4 @@ Assets:
 PHPTAL implmentation
 - template directory /templates/
 - Decorator extends DECTAL extends PHPTAL
+- additional documentation at [PHPTAL.org](http://phptal.org/)
