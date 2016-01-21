@@ -1,17 +1,83 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-    </head>
-    <body>
-        <p>
-            Decorator Header Content
-        </p>
-        <!-- tal inserts subtemplate content here -->
-        <tal:block tal:condition="true: body">
-            <tal:block tal:content="structure body" />
+        <!-- meta tags -->
+        <meta https-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <tal:block tal:condition="exists:meta" tal:repeat="tag meta"
+            ><meta tal:attributes="name tag/name; content tag/content" />
         </tal:block>
-        <p>
-            Decorator Footer Content.
-        </p>
+
+        <!-- stylesheets -->
+        <link href="assets/bootstrap-3.3.6-dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="assets/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" rel="stylesheet" />
+        <tal:block tal:condition="exists:css" tal:repeat="file css"
+            ><link rel="stylesheet" type="text/css" tal:attributes="href file" />
+        </tal:block>
+
+        <title tal:condition="exists:title" tal:content="title" />
+    </head>
+    <body role="document">
+
+        <!-- Fixed navbar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="index.php" class="navbar-brand">Foret Florida</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#">Digital Resume</a></li>
+                        <li><a href="#">Developer's Desk</a></li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                                Interests
+                            <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Audiophile</a></li>
+                            <li><a href="#">Horse Power</a></li>
+                            <li><a href="#">Workout Tips</a></li>
+                            <li><a href="#">Musicianship</a></li>
+                            <li><a href="#">Movies</a></li>
+                          </ul>
+                        </li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                            aria-haspopup="true" aria-expanded="false">
+                                Archive Sites
+                            <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                            <li><a href="#">Elite Audio</a></li>
+                            <li><a href="#">Fifties Cafe</a></li>
+                            <li><a href="#">Gambits</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li class="dropdown-header">2012 Digital Portfolio</li>
+                            <li><a href="#">My Site</a></li>
+                          </ul>
+                        </li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+
+        <!-- tal inserts subtemplate content here -->
+        <tal:block tal:content="structure body" />
+
+        <!-- javascript -->
+        <script type="text/javascript" src="assets/javascript/jquery-2.2.0.min.js"></script>
+        <script type="text/javascript" src="assets/bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="assets/bootstrap-3.3.6-dist/js/docs.min.js"></script>
+        <tal:block tal:condition="exists:js" tal:repeat="file js"
+            ><script type="text/javascript" tal:attributes="src file"></script>
+        </tal:block>
     </body>
 </html>

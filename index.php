@@ -1,18 +1,8 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-   <head>
-      <meta charset="UTF-8">
-      <!--
+<?php
+require_once "php-lib/Decorator.php";
 
-      -->
-      <title>sdforet</title>
-   </head>
-   <body>
-   <h3>Parking Lot</h3>
-   <p>Test site, parking lot for domains and other testing systems, Symfony, PHPTAL, MySQL, etc.</p>
-   <a href="subtemplatetest.php">Visit the PHPTAL site</a>
-   <!--
+$page = new DECORATOR('index.xhtml');
+$page->css('default');
+$page->title('FFL');
 
-   -->
-   </body>
-</html>
+echo $page->execute();
