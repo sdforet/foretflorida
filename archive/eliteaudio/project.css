@@ -1,0 +1,176 @@
+/*
+   Final 
+   Author: Sean Foret
+   Date: 4/29/2012
+
+   File name: project.css
+*/
+
+body {		
+	background-color: #040404;
+	margin: 0;		
+	font-family: Verdana, Arial, sans-serif; 
+}
+
+a {
+	color: #d2d2d2;
+	text-decoration: none;
+}
+
+a:hover { color: #b39316;
+}
+
+p { 	margin: 0;
+	border: 0;
+	color: #d2d2d2;
+}
+
+h1, h2 {
+	 color: #d2d2d2;
+	 border: 0;
+	 margin: 0;
+	 padding: 0;
+}
+
+.titleOne {  padding: 15px;
+}
+
+#wrapper {	
+	margin-left: auto;
+	margin-right: auto;
+	width: 1020px;
+	padding: 20px;
+}
+
+#header {	
+	background-image: url(images/header.jpg);
+	height: 218px;
+}
+
+#content  {	
+	background-image: url(images/main.jpg);
+	height: 558px;
+}
+
+#content h2 {
+	padding-top: 25px;
+	padding-bottom: 10px;
+	padding-left: 85px;
+}
+
+.howtotext {
+	line-height: 150%;
+	padding-left: 115px;
+	padding-right: 115px;
+	font-size: .8em;
+}
+
+#charttext {
+	line-height: 200%;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-left: 115px;
+	padding-right: 115px;
+	font-size: .8em;
+}
+
+
+
+#lower  {
+	background-image: url(images/lower.jpg);
+	height: 173px;
+}
+
+#nav  	{	
+ 	padding-top: 100px;
+  	margin-left: 60px;
+  	font-size: 20px;
+
+}
+
+#nav a {
+	padding-left: 75px;
+}
+
+#leftLarge { 
+	padding-left: 85px;
+	width: 455px;
+	height: 330px;					
+}
+
+#contentLowerPic {
+	padding-top: 10px;
+	padding-left: 45px;
+}
+
+#righttext { 
+	float:right;
+	width: 400px;
+	font-size: .8em;
+	padding-right: 60px;;
+	line-height:195%;
+}
+
+#righttext p { padding-top: 15px; }
+
+#lowertext {
+	padding-top: 30px;
+	padding-left: 50px;
+	padding-right: 50px;
+	text-align: center;
+	line-height: 150%;
+}
+
+#testimony {
+	font-size: .8em;
+	padding: 50px;
+	text-align: center;
+	line-height: 215%;
+}
+
+.elite {
+	color: #b39316;
+	font-weight: bold;
+					 
+}
+
+#cedia a{
+	color: #de2121;
+	font-weight: bold;
+
+}
+
+#footer {	
+	background-image: url(images/footer.jpg);
+	height: 60px;
+}
+
+#footertext {
+    	color: #d2d2d2;
+    	font-size: .7em;
+    	text-align: center;
+	padding-top: 15px;
+}
+
+table {		
+	width: 75%;
+	font-size: 1em;
+	color: #d2d2d2;
+	background-color: #040404;
+	margin: auto;
+	border-style: solid;
+	border-width: medium;
+	border-color: #d2d2d2;
+
+}
+
+th, td {
+	padding: 20px;
+	font-size: .8em;
+	text-align: center;
+	border-style: ridge;
+	border-width: thin;
+	border-color: #d2d2d2;
+}
+
+img { border: 0; }

@@ -1,0 +1,174 @@
+/* CSS Document */
+
+
+body { font-family:Arial, Helvetica, sans-serif; border:0px;
+margin-top:25px; margin-right:0px; margin-left:0px; background-color: #262319;  }
+a, a:visited { color: #000; text-decoration: none; }
+.sp h2 { font-size: 1.15em; margin: 0 0 .5em 0; padding-top: 12px; }
+.sp p { font-size: 1em; margin: 0 0 1em 0; }
+
+h3 {
+	padding-bottom:0;
+}
+#wrapper {	
+	background: url(images/top.png) repeat-x ;
+	border-style:none;
+	border-width:1px;
+	border-color:#bfa771;
+	background-color:#fff; 
+	margin: auto; 
+}
+
+#main {
+	background: url(images/top.png) repeat-x ;
+	background-color:#fff;
+	max-width:800px;
+	margin:auto;	
+}
+#footer {
+	background: url(images/bottom.png) repeat-x ;
+	background-color:#262319;
+	min-height:119px;
+}
+#footer_content {
+	max-width:800px;
+	min-width:799px;
+	padding-top:10px;
+	margin:auto;
+	color:#bfa771;
+	cursor:pointer;
+}
+
+#right_footer {
+	text-align:right;
+}
+
+#footer_content a {color:#bfa771; }
+
+#footer_content a:hover{
+	color:#fff;
+}
+#footer_table { float:left; font-size:12px; line-height:2; padding:25px; }
+
+#footer_table p:hover { color:#fff;   }
+
+#logo_image {
+	text-align:left;	
+}
+.panel_content h5 { text-align:left; padding-left:5px; margin-bottom:5px; font-size:12px;}
+.game_link a { font-size:9px;  }
+
+#design_tr {
+	max-height:51px;	
+}
+
+/* layout */
+.sp { width: 682px; position: relative; /*text-align: right;*/ margin: auto; margin-top: 3px;}
+
+.sp .tabs { position: relative; z-index: 101; text-align:right; display: none; max-height: 27px;}
+
+.sp .tabs span {
+	display: inline-block; color:#000;
+	padding: 0px 0px 0px 0px;
+	margin: 0px;
+	background-color: #262319;
+	cursor: pointer;
+	position: relative;
+}
+
+.sp .tabs span:first-child {
+	padding-left: 15px;
+}
+
+.sp .tabs span:last-child {
+	padding-right: 15px;
+
+}
+
+.sp .tabs span.selected {
+	color: #000;
+}
+
+.sp .panel_container {
+	position: relative;
+	background-color: #fff;
+	overflow: hidden;
+	min-width: 682px;
+	min-height: 508px;
+	z-index: 100;
+	margin-top:20px;
+}
+
+.sp .panel_container .panel .panel_content { padding: 15px 15px 5px 15px; }
+
+.sp .tabs .tab1.selected { color: #fff; back}
+.sp .panels .tab1 { background: url(images/about_back.jpg) no-repeat 0px 0px; }
+.sp .panels .tab .panel_content { margin-right: 125px; }
+.sp .panels .tab1 .panel_content h2 { color: #000; text-align:left; }
+.sp .panels .tab1 .panel_content p { color: #000; text-align:left; padding-left: 15px; font-size:11px; }
+.sp .panels .tab1 .panel_content a { color: #000; text-align:left; font-size:9px; }
+
+.sp .tabs .tab2.selected { color: #fff; }
+.sp .panels .tab2 { background: url(images/code_back.jpg) no-repeat 0px 0px; }
+.sp .panels .tab2 .panel_content { margin-right: 125px; }
+.sp .panels .tab2 .panel_content h2 { color: #000; text-align:left;  }
+.sp .panels .tab2 .panel_content p { color: #000; text-align:left; padding-left: 15px; font-size:11px;}
+.sp .panels .tab2 .panel_content a { color: #000; text-align:left;font-size:9px; }
+
+.sp .tabs .tab3.selected { color: #fff; }
+.sp .panels .tab3 { background: url(images/design_back.jpg) no-repeat 0px 0px; }
+.sp .panels .tab3 .panel_content { margin-right: 125px; }
+.sp .panels .tab3 .panel_content h2 { color: #000; text-align:left; }
+.sp .panels .tab3 .panel_content p { color: #000; text-align:left; padding-left: 15px;font-size:11px;}
+.sp .panels .tab3 .panel_content a { color: #000; text-align:center; font-size:9px;}
+
+.sp .tabs .tab4.selected { color: #fff;  }
+.sp .panels .tab4 { background: url(images/education_back.jpg) no-repeat 0px 0px; }
+.sp .panels .tab4 .panel_content { margin-right: 125px; }
+.sp .panels .tab4 .panel_content h2 { color: #000; text-align:left; }
+.sp .panels .tab4 .panel_content p { color: #000; text-align:left; padding-left: 15px; font-size: 11px; }
+.sp .panels .tab4 .panel_content a { color: #000; text-align: left; font-size:9px; }
+.sp .panels .thumbnail { border: 1px solid #c5c5c5; }
+
+.sp .panels .tab2 .panel_content .game_link_head a { color: #000; text-align: left; font-size:12px; }
+
+.slidertext{
+	font:10px Arial;
+	letter-spacing:2;
+	line-height:1.5;
+	text-align:justify;
+		
+}
+.group1 {
+	padding:0px;
+	width: 500px;
+	max-height: 20px;
+	text-align: center;	
+}
+
+#game_board { 	
+	visibility:hidden;
+	max-width:682px;
+	background-color:#fcf8f8;
+	margin:auto;
+	color:#000;
+	text-align:center;
+}
+
+
+/* stagate game css */
+#SGtable { width:680px; background-color:#000; padding:5px;}
+.hangman_letters {color: #FC3; text-align:center; font-size:xx-large; }
+.used_letters {color:#933;text-align:center;font-size:large;}
+#hint_link {color:#2a7d47;}
+#hint_text {color:#2a7d47; padding-left:75px; padding-right:75px;}
+.centerContentSG {padding-top:5px;text-align:center;}
+.centerContentSG a {color:#0066CC;}
+.centerContentSG a:hover {color:#dce305;}
+#SGmenu {color:#0066CC;	}
+#SGmenu:hover {	color:#06F;}
+
+#footer_text { font-size:9px; text-align:center; color:#bfa771;	
+}
+
+
