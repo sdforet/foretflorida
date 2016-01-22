@@ -1,0 +1,120 @@
+<tal:block>
+    <div class="container theme-showcase" role="main">
+        <div class="jumbotron">
+            <h1>Datetime Picker</h1>
+            <p>
+                Parking lot to test different customizations for
+                <a target="_blanck" href="http://eonasdan.github.io/bootstrap-datetimepicker/">eonasdan</a> DTP!
+            </p>
+        </div>
+<br />
+<h3>Minimum Setup</h3>
+    <div class="container">
+        <div class="row">
+            <div class='col-sm-6'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker1').datetimepicker({
+                        debug: true
+                    });
+                });
+            </script>
+        </div>
+    </div>
+
+<br />
+<h3>Custom Formats</h3>
+    <div class="container">
+        <div class="row">
+            <div class='col-sm-6'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker3'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-time"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker3').datetimepicker({
+                        format: 'LT'
+                    });
+                });
+            </script>
+        </div>
+    </div>
+
+<br />
+<h3>Disabled Dates</h3>
+    <div class="container">
+        <div class="row">
+            <div class='col-sm-6'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker5'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker5').datetimepicker({
+                        defaultDate: "11/1/2013",
+                        disabledDates: [
+                            moment("12/25/2013"),
+                            new Date(2013, 11 - 1, 21),
+                            "11/22/2013 00:53"
+                        ]
+                    });
+                });
+            </script>
+        </div>
+    </div>
+
+<br />
+<h3>Disabled Days of the week</h3>
+    <div class="container">
+        <div class="col-sm-6" style="height:130px;">
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker11'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar">
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker11').datetimepicker({
+                    daysOfWeekDisabled: [0, 6]
+                });
+            });
+        </script>
+    </div>
+<br />
+
+    <div class="container theme-showcase" role="main">
+        <div class="jumbotron">
+            <h1>Datetime Picker</h1>
+            <p>
+                Parking lot to test different customizations for jQuery UI DTP!
+            </p>
+        </div>
+    </div>
+</div>
+</tal:block>

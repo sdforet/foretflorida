@@ -45,12 +45,12 @@ abstract class DECTAL extends PHPTAL
     /**
      * @var - string path to the javascript files
      */
-    private $jquery_path = 'assets/javascript/';
+    private $jquery_path = 'assets/';
 
     /**
      * @var - string path to the stylesheets
      */
-    private $css_path = 'assets/stylesheets/';
+    private $css_path = 'assets/';
 
     /**
      * DECTAL Constructor to set up template and inner template repos
