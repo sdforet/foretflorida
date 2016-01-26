@@ -1,62 +1,62 @@
 <tal:block>
-    <div class="container theme-showcase" role="main">
-        <div class="jumbotron">
-            <h1>Datetime Picker</h1>
-            <p>
-                Parking lot to test different customizations for
-                <a target="_blanck" href="http://eonasdan.github.io/bootstrap-datetimepicker/">eonasdan</a> DTP!
-            </p>
-        </div>
-<br />
-<h3>Minimum Setup</h3>
-    <div class="container">
-        <div class="row">
-            <div class='col-sm-6'>
-                <div class="form-group">
-                    <div class='input-group date' id='datetimepicker1'>
-                        <input type='text' class="form-control" />
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
+<div class="container theme-showcase" role="main">
+    <div class="jumbotron">
+        <h1>Datetime Picker</h1>
+        <p>
+            Parking lot to test different customizations for
+            <a target="_blanck" href="http://eonasdan.github.io/bootstrap-datetimepicker/">eonasdan</a> DTP!
+        </p>
+    </div>
+    <br />
+    <h3>Minimum Setup</h3>
+        <div class="container">
+            <div class="row">
+                <div class='col-sm-6'>
+                    <div class="form-group">
+                        <div class='input-group date' id='datetimepicker1'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <script type="text/javascript">
-                $(function () {
-                    $('#datetimepicker1').datetimepicker({
-                        debug: true
+                <script type="text/javascript">
+                    $(function () {
+                        $('#datetimepicker1').datetimepicker({
+                            debug: true
+                        });
                     });
-                });
-            </script>
+                </script>
+            </div>
         </div>
-    </div>
 
-<br />
-<h3>Custom Formats</h3>
-    <div class="container">
-        <div class="row">
-            <div class='col-sm-6'>
-                <div class="form-group">
-                    <div class='input-group date' id='datetimepicker3'>
-                        <input type='text' class="form-control" />
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-time"></span>
-                        </span>
+    <br />
+    <h3>Custom Formats</h3>
+        <div class="container">
+            <div class="row">
+                <div class='col-sm-6'>
+                    <div class="form-group">
+                        <div class='input-group date' id='datetimepicker3'>
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <script type="text/javascript">
-                $(function () {
-                    $('#datetimepicker3').datetimepicker({
-                        format: 'LT'
+                <script type="text/javascript">
+                    $(function () {
+                        $('#datetimepicker3').datetimepicker({
+                            format: 'LT'
+                        });
                     });
-                });
-            </script>
+                </script>
+            </div>
         </div>
-    </div>
 
-<br />
-<h3>Disabled Dates</h3>
+    <br />
+    <h3>Disabled Dates</h3>
     <div class="container">
         <div class="row">
             <div class='col-sm-6'>
@@ -83,30 +83,30 @@
             </script>
         </div>
     </div>
+    <br />
 
-<br />
-<h3>Disabled Days of the week</h3>
-    <div class="container">
-        <div class="col-sm-6" style="height:130px;">
-            <div class="form-group">
-                <div class='input-group date' id='datetimepicker11'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar">
+    <h3>Disabled Days of the week</h3>
+        <div class="container">
+            <div class="col-sm-6" style="height:130px;">
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker11'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar">
+                            </span>
                         </span>
-                    </span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <script type="text/javascript">
-            $(function () {
-                $('#datetimepicker11').datetimepicker({
-                    daysOfWeekDisabled: [0, 6]
+            <script type="text/javascript">
+                $(function () {
+                    $('#datetimepicker11').datetimepicker({
+                        daysOfWeekDisabled: [0, 6]
+                    });
                 });
-            });
-        </script>
-    </div>
-<br />
+            </script>
+        </div>
+    <br />
 
     <div class="container theme-showcase" role="main">
         <div class="jumbotron">
@@ -116,5 +116,28 @@
             </p>
         </div>
     </div>
+
+    <script type="text/javascript">
+        $(".date-picker").datepicker();
+
+        $(".date-picker").on("change", function () {
+            var id = $(this).attr("id");
+            var val = $("label[for='" + id + "']").text();
+            $("#msg").text(val + " changed");
+        });
+    </script>
+
+    <h3>jQuery DTP without bootstrap and week-picker functionality</h3>
+    <p>
+        Selection from:  <span id="startDate">__________</span>   to   <span id="endDate">__________</span>
+    </p>
+    <div class="container">
+        <div class="col-sm-6" style="height:130px;">
+            <div class="week-picker"></div>
+        </div>
+    </div>
+    <br />
+    <br />
+
 </div>
 </tal:block>

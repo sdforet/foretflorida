@@ -19,3 +19,27 @@ body {
 .theme-showcase .navbar .container {
     width: auto;
 }
+.date-form {
+    margin: 10px;
+}
+label.control-label span {
+    cursor: pointer;
+}
+.week-picker .ui-state-active {
+    background: #29ABE2;
+    border: 1px solid #29ABE2;
+}
+.week-picker .ui-state-highlight {
+    background: #5CB85C;
+    border: 1px solid #4CAE4C;
+    color: white;
+    font-weight: bold;
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    text-align: center;
+}
+.ui-datepicker-week-end, .ui-datepicker-week-end a.ui-state-default {
+    pointer-events: none;
+    cursor: no-drop;
+    color: #888;
+} 

@@ -3,12 +3,14 @@ require_once "php-lib/Decorator.php";
 
 $page = new DECORATOR('dDesk.xhtml');
 $page->css(
-    'stylesheets/default',
-    'bootstrap-datetimepicker/css/bootstrap-datetimepicker'
+    'bootstrap-datetimepicker/css/bootstrap-datetimepicker',
+    'stylesheets/jquery-ui/jquery-ui',
+    'stylesheets/default'
 );
 $page->js(
+    'javascript/jquery-ui.min',
     'bootstrap-datetimepicker/js/bootstrap-datetimepicker.min',
-    'bootstrap-datetimepicker/js/bootstrap-weekpicker'
+    'javascript/weekpicker'
 );
 $page->title('Developer Desk');
 $page->deskHighlight = true;
