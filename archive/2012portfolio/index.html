@@ -1,133 +1,246 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Sean Foret</title>
-<link href="main.css" rel="stylesheet" type="text/css" media="screen" />
-<link href="includes/colorbox.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript" src="includes/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="includes/slide.js"></script>
-<script type="text/javascript" src="includes/jquery.colorbox-min.js"></script>
-<script type="text/javascript" src="includes/tic_tac_toe.js"></script>
-<script type="text/javascript" src="includes/hangman.js"></script>
-
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <title>Sean Foret</title>
+   <link href="main.css" rel="stylesheet" type="text/css" media="screen" />
+   <link href="includes/colorbox.css" rel="stylesheet" type="text/css" />
+   <script type="text/javascript" src="includes/jquery-1.7.1.min.js"></script>
+   <script type="text/javascript" src="includes/slide.js"></script>
+   <script type="text/javascript" src="includes/jquery.colorbox-min.js"></script>
+   <script type="text/javascript" src="includes/tic_tac_toe.js"></script>
+   <script type="text/javascript" src="includes/hangman.js"></script>
 </head>
 <body>
 <div id="wrapper">
 
-<div id="main">
-        <div id="header"><img id="logo_image" src="images/logo.png" /> 
-          <div id ="top_nav" class="sp">
+   <div id="main">
+      <div id="header"><img id="logo_image" src="images/logo.png" />
+         <div id ="top_nav" class="sp">
             <div class = "tabs">
-					<span class="tab1"><img src="images/about_off.png" onmouseover="src='images/about_over_06.png'" onmouseout="src='images/about_off.png'" /></span>
-                    <span class="tab2"><img src="images/code_off.png" onmouseover="src='images/code_over.png'" onmouseout="src='images/code_off.png'" /></span>
-                    <span class="tab3"><img src="images/design_off.png" onmouseover="src='images/design_over.jpg'" onmouseout="src='images/design_off.png'" /></span>
-                    <span class="tab4"><img src="images/education_off.png" onmouseover="src='images/education_over.png'" onmouseout="src='images/education_off.png'" /></span>
-            </div><!-- end tabs -->
-          </div> <!-- end top_nav .sp -->        
-		</div> <!-- header -->
-</div> <!-- end main -->
+               <span class="tab1">
+                  <img src="images/about_off.png" onmouseover="src='images/about_over_06.png'"
+                  onmouseout="src='images/about_off.png'" />
+               </span>
+               <span class="tab2">
+                  <img src="images/code_off.png" onmouseover="src='images/code_over.png'"
+                  onmouseout="src='images/code_off.png'" />
+               </span>
+               <span class="tab3">
+                  <img src="images/design_off.png" onmouseover="src='images/design_over.jpg'"
+                     onmouseout="src='images/design_off.png'" />
+               </span>
+               <span class="tab4">
+                  <img src="images/education_off.png" onmouseover="src='images/education_over.png'"
+                     onmouseout="src='images/education_off.png'" />
+               </span>
+            </div>
+         </div>
+      </div>
+   </div> <!-- end main -->
 
-<!-- Begin - Sliding Panels -->
-
-<!-- PANEL ONE -->
+   <!-- Begin - Sliding Panels -->
 	<div class="sp">
-	 <div class="panel_container">
-       <div class="panels">
+      <div class="panel_container">
+         <div class="panels">
+            <!-- PANEL ONE -->
             <div class="panel tab1">
-                <div class="panel_content">
-                <h2>About Sean</h2>
-                <p class="slidertext">This digital portion of my resume is designed to let your company know a little more about me and what I have the potential to do as a member of your team. Thank you for taking the time to browse over my work and I hope that your search for the right developer is going well. </p>
-               <p class="slidertext"> I am originally from South Louisiana, and although my accent is gone, I am still a Cajun. I now live in Gainesville with my family and have been attending classes at Santa Fe College since fall 2011. I have completed my A.A. degree and will finish my A.S. in August. My goal is to find a great company to work with as I continue to develop my skills as a programmer while completing my education at Santa Fe. The academic work is fun and challenging, but I am anxious to test my new skills in a professional environment.</p>
-               <p class="slidertext"> While I don’t always take myself too seriously, I consider myself to be a good communicator and enjoy a professional environment. I am loyal and committed to the core, and would love the opportunity to learn in a professional environment, especially one that I could remain in and cultivate my abilities for years.</p>
-  
-                </div> <!--end panel_content-->
-            </div> <!-- end panel tab1-->
-    
-<!-- PANEL TWO  -->
-            <div class="panel tab2">
-            <div class="panel_content">
-            <h2>Code Examples</h2>           
-            <p class="slidertext">Here are a couple of games that I developed for my classes at Santa Fe. There are many more, but I just chose a couple that I have been particularly happy with.</p>
-            <h5 class="game_link_head"><a href="javascript:beginTTT()">Tic Tac Toe (PC vs MAC)</a></h5>
-            <p><a class="slidertext" href="_resources/TTT_code.txt" target="_new">Click here to view a .txt file of the script. </a> </p>
-            <h5 class="game_link_head"><a href="javascript:beginHANG()">HangMan (Stargate Version)</a></h5>
-            <p><a class="slidertext" href="_resources/HANG_code.txt" target="_new">Click here to view a .txt file of the script. </a> </p>
-            <h5 class="game_link_head"><a href="#)">Game of 21 (HALO edition)</a></h5>
-            <p><a class="slidertext" href="#" target="_new">Comming Soon!</a> </p>
-            
-            <h2>Site Examples</h2>
-            
-            <p class="slidertext">Here are a couple of Sites that I have been developing as part of my academic work at Santa Fe College, these sites are for active classes so not all of the features are complete.</p>
-            <h5 class="game_link_head"><a href="http://www.foretflorida.com/elite/" target="_new">Elite Audio Site</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="http://www.foretflorida.com/COP2822/SeansGambits/" target="_new">Sean's GameBits!</a></h5>
-            
-
-           </div> <!--end panel_content-->
-           </div> <!-- end panel tab2-->
-    
-<!-- PANEL THREE  -->
-            <div class="panel tab3">
-                <div class="panel_content">
-                <h2>Design</h2>
-                <p class="slidertext">I have experience using Adobe PS as well as Corel applications to create and manipulate professional design layouts. I believe that a good web developer should be able to confidently and correctly manipulate and create images for the web. The examples that I have provided below show a brief example of what I have done in the past as well as give you an idea of what I could do in the future.</p> 
- 
-    <table>
-    <tr><td><a class="group1"  href="images/gallery/elite_one.jpg" title="Elite One, SF college"><img src="images/gallery/elite_one_small.jpg" height='50' /></a></td><td><p>Elite Audio semester two</p></td></tr>
-    <tr><td><a class="group1"  href="images/gallery/elite_two.jpg" title="Elite Two, SF college"><img src="images/gallery/elite_two_small.jpg" height='50' /></a></td><td><p>Elite Audio semester three</p></td></tr>
-    <tr><td><a class="group1"  href="images/gallery/fbc_home.jpg" title="FBC Bartow Site, Work"><img src="images/gallery/fbc_home_small.jpg" height='50' /></a></td><td><p>Design Comp of Bartow First</p></td></tr>
-    <tr><td><a class="group1"  href="images/gallery/fbc_logo.jpg" title="Bartow First Logo, Work"><img src="images/gallery/fbc_logo_small.jpg" height='50' /></a></td><td><p>Bartow First Logo</p></td></tr>
-    <tr><td><a class="group1"  href="images/gallery/diner.jpg" title="50's Style Diner, SF college"><img src="images/gallery/diner_small.jpg" height='50' /></a></td><td><p>50's Diner, semster one</p></td></tr>
-    </table>
- 
- 
- 
-                </div> <!--end panel_content-->
-            </div> <!-- end panel tab3-->
-    
-<!-- PANEL FOUR  -->
-            <div class="panel tab4">
-                <div class="panel_content">
-                <h2>Education</h2>
-                <h5>Associate of Arts in General Science and Engineering (completed)</h5>
-                <p class="slidertext">Completed at Santa Fe College in December of 2012. This degree was achieved while simultaneously pursuing my A.S. in Internet Programming listed below.</p>
-                <h5>Associate of Science in Internet Programming (nearing completion)</h5>
-                <p class="slidertext">Will be completed at Santa Fe College in August of 2013. I am currently 98 percent done with this program at Santa Fe College. I have one class remaining to take this summer to complete the degree and I am currently completing my last 15 credit hour semester which will conclude in May 2013.</p>
-                <h5>Bachelor of Applied Science in Business Mgmt IT (December 2014)</h5>
-                <p class="slidertext">Will be completed at Santa Fe College in December of 2014. Once I have completed the A.S. program this summer, my goal is to press towards a B.A.S. to be completed in three semesters. I have already enrolled in this program and I am set to begin classes this fall.</p>
-
+               <div class="panel_content">
+                  <h2>About Sean</h2>
+                  <p class="slidertext">
+                     Thank you for taking the time to browse over my work and I hope that your search for
+                     the right developer is going well.
+                  </p>
+                  <p class="slidertext">
+                     I am originally from South Louisiana, and although my accent is gone, I am still a Cajun. I have
+                     many hobbies, which you can browse through on my <a href="../index.php">primary</a> site. The two
+                     that bring me the most enjoyment is music (playing bass/piano), and horsepower. There are few
+                     experiences that can compete with driving a 450HP 5.0L V8 off the line.
+                  </p>
+                  <p class="slidertext">
+                     I now live in Newberry with my family and have been working fulltime as a
+                     Software Developer for Gleim Internet since April of 2013. This position requires proficiency
+                     with the following:
+                     <table>
+                        <tr>
+                           <td>
+                              <ul>
+                                 <li>PHP</li>
+                                 <li>PHPTAL</li>
+                                 <li>Symfony</li>
+                                 <li>Doctrine</li>
+                                 <li>TWIG</li>
+                                 <li>jQuery</li>
+                                 <li>JavaScript</li>
+                                 <li>MySql</li>
+                              </ul>
+                           </td>
+                           <td>
+                              <ul>
+                                 <li>Notepad++ <sub>(primary editor)</sub></li>
+                                 <li>Version Control using Git and Mercurial</li>
+                                 <li>MinTTY with GitBash</li>
+                                 <li>gitHub</li>
+                                 <li>gitLab</li>
+                                 <li>PuTTY</li>
+                                 <li>VIM</li>
+                                 <li>Mozilla Developers Tools</li>
+                              </ul>                           
+                           </td>
+                        </tr>
+                     </table>
+                  </p>
+                  <p class="slidertext">
+                     I try not to take myself too seriously. I am a good communicator and enjoy contributing to
+                     a professional, fun, and engaging environment. I am loyal and committed to the core, and
+                     would love the opportunity to continue cultivating my abilities with your team.
+                  </p>
                </div> <!--end panel_content-->
-           </div> <!-- end panel tab4-->
-      </div> <!--end panels-->
-     </div> <!--end panel container-->
-    </div> <!--end sp-->
-<!-- End - Sliding  Panels -->
+            </div> <!-- end panel tab1-->
 
-<div id="game_board">&nbsp;</div><!-- end game_board -->
+            <!-- PANEL TWO  -->
+            <div class="panel tab2">
+               <div class="panel_content">
+                  <h2>Code Examples</h2>
+                  <p class="slidertext">
+                     Here are a couple of games that I developed for my classes at Santa Fe. There are
+                     many more, but I just chose a couple that I have been particularly happy with.
+                  </p>
+                  <h5 class="game_link_head"><a href="javascript:beginTTT()">Tic Tac Toe (PC vs MAC)</a></h5>
+                  <p>
+                     <a class="slidertext" href="_resources/TTT_code.txt" target="_new">
+                        Click here to view a .txt file of the script.
+                     </a>
+                  </p>
+                  <h5 class="game_link_head"><a href="javascript:beginHANG()">HangMan (Stargate Version)</a></h5>
+                  <p>
+                     <a class="slidertext" href="_resources/HANG_code.txt" target="_new">
+                        Click here to view a .txt file of the script.
+                     </a>
+                  </p>
 
-    <div id="footer">
-	    <div id="footer_content">
+                  <h2>Site Example</h2>
 
-        <table width="750" border="0" cellpadding="15" id="footer_table">
-          <tr class="footer">
-            <td id="left_footer" class = "footer_link">
-            	<span class="tab1"><p>About Me</p></span>
-        		<span class="tab2"><p>Code Examples</p></span>
-        		<span class="tab3"><p>Design Gallery</p></span>
-        		<span class="tab4"><p>Education</p></span></td>
-            <td id='center_footer'>&nbsp;</td>
-            <td id ='right_footer'>
-        		<p><a href="https://github.com/sdforet" target="_new">GitHub</a></p>
-        		<p><a href="https://www.facebook.com/sean.foret.1" target="_new">Facebook</a></p>
-        		<p><a href="https://twitter.com/sdforet" target="_new">Twitter</a></p>
-                <p><a href="https://pinterest.com/sdforet/" target="_new">Pinterest</a></p></td>
-          </tr>
-          <tr ><td colspan="3"><p id="footer_text">&copy; 2013 Sean Foret</p></td></tr>
-        </table>
-		<p><img src='images/close_bracket.png' style="padding-top:25px"/></p><br /><br />
+                  <h5 class="game_link_head"><a href="../eliteaudio/index.htm" target="_new">Elite Audio Site</a>
+               </div>
+            </div>
+
+            <!-- PANEL THREE  -->
+            <div class="panel tab3">
+               <div class="panel_content">
+                  <h2>Design</h2>
+                  <p class="slidertext">
+                     I have experience using Adobe PS as well as Corel applications to create and manipulate
+                     professional design layouts. I believe that a good web developer should be able to confidently
+                     and correctly manipulate and create images for the web. The examples that I have provided below
+                     show a brief example of what I have done in the past as well as give you an idea of what I could
+                     do in the future.
+                  </p>
+
+                  <table>
+                     <tr>
+                     <td>
+                        <a class="group1"  href="images/gallery/elite_one.jpg" title="Elite One, SF college">
+                           <img src="images/gallery/elite_one_small.jpg" height='50' />
+                        </a>
+                     </td>
+                     <td><p>Elite Audio semester two</p></td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <a class="group1"  href="images/gallery/elite_two.jpg" title="Elite Two, SF college">
+                              <img src="images/gallery/elite_two_small.jpg" height='50' />
+                           </a>
+                        </td>
+                        <td><p>Elite Audio semester three</p></td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <a class="group1"  href="images/gallery/fbc_home.jpg" title="FBC Bartow Site, Work">
+                              <img src="images/gallery/fbc_home_small.jpg" height='50' />
+                           </a>
+                        </td>
+                        <td><p>Design Comp of Bartow First</p></td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <a class="group1" href="images/gallery/fbc_logo.jpg" title="Bartow First Logo, Work">
+                              <img src="images/gallery/fbc_logo_small.jpg" height='50' />
+                           </a>
+                        </td>
+                        <td><p>Bartow First Logo</p></td>
+                     </tr>
+                     <tr>
+                        <td>
+                           <a class="group1"  href="images/gallery/diner.jpg" title="50's Style Diner, SF college">
+                              <img src="images/gallery/diner_small.jpg" height='50' />
+                           </a>
+                        </td>
+                        <td><p>50's Diner, semster one</p></td>
+                     </tr>
+                  </table>
+               </div>
+            </div>
+
+            <!-- PANEL FOUR  -->
+            <div class="panel tab4">
+               <div class="panel_content">
+                  <h2>Education</h2>
+                  <h5>Associate of Science, Progamming and Analysis</h5>
+                  <p class="slidertext">
+                     Completed at Santa Fe College in August of 2014.
+                  </p>
+                  <h5>Associate of Science, Internet Services and Technology</h5>
+                  <p class="slidertext">
+                     Completed at Santa Fe College in August of 2013.
+                  </p>
+                  <h5>Associate of Arts, General Science and Engineering</h5>
+                  <p class="slidertext">
+                     Completed at Santa Fe College in December of 2012.
+                  </p>
+                  <h5>Continued Training</h5>
+                  <p class="slidertext">
+                     I currently maintain memberships with Code School, Lynda.com, and Pluralsite. This enables
+                     me to learn new skills and reinforce exiting ones using industry standard practices. I find
+                     that these sites enable me to keep in check my coding practices to ensure they maintain a high
+                     degree of professionalism.
+                  </p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- End - Sliding  Panels -->
+
+   <div id="game_board">&nbsp;</div>
+
+   <div id="footer">
+      <div id="footer_content">
+
+         <table width="750" border="0" cellpadding="15" id="footer_table">
+            <tr class="footer">
+               <td id="left_footer" class = "footer_link">
+                  <span class="tab1"><p>About Me</p></span>
+                  <span class="tab2"><p>Code Examples</p></span>
+                  <span class="tab3"><p>Design Gallery</p></span>
+                  <span class="tab4"><p>Education</p></span>
+               </td>
+               <td id='center_footer'>&nbsp;</td>
+               <td id ='right_footer'>
+                  <p><a href="https://github.com/sdforet" target="_new">GitHub</a></p>
+                  <p><a href="https://www.facebook.com/sean.foret.1" target="_new">Facebook</a></p>
+                  <p><a href="https://twitter.com/sdforet" target="_new">Twitter</a></p>
+                  <p><a href="https://pinterest.com/sdforet/" target="_new">Pinterest</a></p>
+               </td>
+            </tr>
+            <tr >
+               <td colspan="3"><p id="footer_text">&copy; 2013 Sean Foret</p></td>
+            </tr>
+         </table>
+         <p><img src='images/close_bracket.png' style="padding-top:25px"/></p><br /><br />
 
       </div><!-- end footer_content -->
-
-    </div> <!-- end footer -->
+   </div> <!-- end footer -->
 </div><!-- end wrapper -->
 </body>
 </html>

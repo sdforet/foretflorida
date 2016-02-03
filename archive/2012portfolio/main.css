@@ -4,26 +4,24 @@
 body { font-family:Arial, Helvetica, sans-serif; border:0px;
 margin-top:25px; margin-right:0px; margin-left:0px; background-color: #262319;  }
 a, a:visited { color: #000; text-decoration: none; }
-.sp h2 { font-size: 1.15em; margin: 0 0 .5em 0; padding-top: 12px; }
-.sp p { font-size: 1em; margin: 0 0 1em 0; }
 
 h3 {
 	padding-bottom:0;
 }
-#wrapper {	
+#wrapper {
 	background: url(images/top.png) repeat-x ;
 	border-style:none;
 	border-width:1px;
 	border-color:#bfa771;
-	background-color:#fff; 
-	margin: auto; 
+	background-color:#FCF8F7;
+	margin: auto;
 }
 
 #main {
 	background: url(images/top.png) repeat-x ;
-	background-color:#fff;
+	background-color:#FCF8F7;
 	max-width:800px;
-	margin:auto;	
+	margin:auto;
 }
 #footer {
 	background: url(images/bottom.png) repeat-x ;
@@ -53,19 +51,28 @@ h3 {
 #footer_table p:hover { color:#fff;   }
 
 #logo_image {
-	text-align:left;	
+	text-align:left;
 }
-.panel_content h5 { text-align:left; padding-left:5px; margin-bottom:5px; font-size:12px;}
-.game_link a { font-size:9px;  }
 
 #design_tr {
-	max-height:51px;	
+	max-height:51px;
 }
 
 /* layout */
-.sp { width: 682px; position: relative; /*text-align: right;*/ margin: auto; margin-top: 3px;}
+.sp {
+   width: 682px;
+   position: relative; /*text-align: right;*/
+   margin: auto;
+   margin-top: 3px;
+   font-size: 11px;
+}
 
 .sp .tabs { position: relative; z-index: 101; text-align:right; display: none; max-height: 27px;}
+.sp h2 { font-size: 18px; margin: 0 0 .5em 0; padding-top: 12px; }
+.sp p { font-size: 1em; margin: 0 0 1em 0; }
+.panel_content h5 { text-align:left; padding-left:5px; margin-bottom:5px; font-size:12px;}
+
+.game_link a { font-size:9px;  }
 
 .sp .tabs span {
 	display: inline-block; color:#000;
@@ -91,12 +98,12 @@ h3 {
 
 .sp .panel_container {
 	position: relative;
-	background-color: #fff;
+	background-color: #FCF8F7;
 	overflow: hidden;
 	min-width: 682px;
 	min-height: 508px;
 	z-index: 100;
-	margin-top:20px;
+	margin-top:34px;
 }
 
 .sp .panel_container .panel .panel_content { padding: 15px 15px 5px 15px; }
@@ -137,16 +144,16 @@ h3 {
 	letter-spacing:2;
 	line-height:1.5;
 	text-align:justify;
-		
+
 }
 .group1 {
 	padding:0px;
 	width: 500px;
 	max-height: 20px;
-	text-align: center;	
+	text-align: center;
 }
 
-#game_board { 	
+#game_board {
 	visibility:hidden;
 	max-width:682px;
 	background-color:#fcf8f8;
@@ -168,7 +175,7 @@ h3 {
 #SGmenu {color:#0066CC;	}
 #SGmenu:hover {	color:#06F;}
 
-#footer_text { font-size:9px; text-align:center; color:#bfa771;	
+#footer_text { font-size:9px; text-align:center; color:#bfa771;
 }
 
 
