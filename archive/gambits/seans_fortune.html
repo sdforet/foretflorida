@@ -1,0 +1,97 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="_includes/encrypt.js"></script>
+<title>Sean's Gambits | Madame Vadoma Sees All</title>
+<link href="gambit.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+function startFortune()
+{
+   //initialize variables: edit fortunes if you want
+   var num = 0;
+   var question = " ";
+   var fortune1 = "<h1 id='madameAnswer'>Absolutely <br /><a href = 'seans_fortune.html'>Return to Madame Vedona's Chamber</a><br /> </h1>";
+   var fortune2 = "<h1 id='madameAnswer'>When You Believe it Enough it can be so.<br /><a href = 'seans_fortune.html'>Return to Madame Vedona's Chamber</a><br /></h1>";
+   var fortune3 = "<h1 id='madameAnswer'>Probably going to happen today</h1><br /><a href = 'seans_fortune.html'>Return to Madame Vedona's Chamber</a><br /></h1>";
+   var fortune4 = "<h1 id='madameAnswer'>Its Goin to Happen<br /><a href = 'seans_fortune.html'>Return to Madame Vedona's Chamber</a><br /></h1>";
+   var fortune5 = "<h1 id='madameAnswer'>As Sure as the sun will rise this will happen.<br /><a href = 'seans_fortune.html'>Return to Madame Vedona's Chamber</a><br /></h1>";
+   var fortune6 = "<h1 id='madameAnswer'>Madame Vadoma is confident you will succeed <br /><a href = 'seans_fortune.html'>Return to Madame Vedona's Chamber</a><br /></h1>";
+   var fortune7 = "<h1 id='madameAnswer'>The the answer is positively within yourself.<br /><a href = 'seans_fortune.html'>Return to Madame Vedona's Chamber</a><br /></h1>";
+   var fortune8 = "<h1 id='madameAnswer'>Yes, of course!<br /><a href = 'seans_fortune.html'>Return to Madame Vedona's Chamber</a><br /></h1>";
+   var fortune9 = "<h1 id='madameAnswer'>Others may doubt this, but I am sure you will succeed.<br /><a href = 'seans_fortune.html'>Return to Madame Vedona's Chamber</a><br /></h1>";
+   var fortune10 = "<h1 id='madameAnswer'>Madame Vadome says YES!<br /><a href = 'seans_fortune.html'>Return to Madame Vedona's Chamber</a><br /></h1>";
+   var fortuneHeader = "<h2 id='madameAnswerTop'>Madame Vadoma has considered your request and this is the answer to your question: <br />";
+   num = (Math.floor(Math.random() * 10)) + 1;
+   question = prompt("What is your question? ", " ");
+   switch(num)
+   {
+    case 1:
+    document.getElementById("content").innerHTML = fortuneHeader + question + " " + fortune1;
+    break;
+    case 2:
+    document.getElementById("content").innerHTML = fortuneHeader + question + " " + fortune2;
+    break;
+    case 3:
+    document.getElementById("content").innerHTML = fortuneHeader + question + " " + fortune3;
+    break;
+    case 4:
+    document.getElementById("content").innerHTML = fortuneHeader + question + " " + fortune4;
+    break;
+    case 5:
+    document.getElementById("content").innerHTML = fortuneHeader + question + " " + fortune5;
+    break;
+    case 6:
+    document.getElementById("content").innerHTML = fortuneHeader + question + " " + fortune6;
+    break;
+    case 7:
+    document.getElementById("content").innerHTML = fortuneHeader + question + " " + fortune7;
+    break;
+    case 8:
+    document.getElementById("content").innerHTML = fortuneHeader + question + " " + fortune8;
+    break;
+    case 9:
+    document.getElementById("content").innerHTML = fortuneHeader + question + " " + fortune9;
+    break;
+    case 10:
+    document.getElementById("content").innerHTML = fortuneHeader + question + " " + fortune10;
+    break;
+   }
+}
+</script>
+</head>
+<body onload="navigationFill(); footerFill();">
+
+<div id="wrapper">
+
+<div id="container">
+   <div id="leftCol">
+      <div id="nav">
+      </div> <!-- end nav -->
+
+      <div id="footer">
+      </div> <!-- end footer -->
+   </div> <!-- end leftCol -->
+
+<div id="headerContent">
+   <img src="_images/headerImage.jpg" width="769px" height="136px" />
+</div>
+
+<div id="content">
+   <h1>Madame Vedoma knows all (Optomist Version)</h1>
+    <h2 id="centerContent">Madame Vadoma<br /><br />
+    <img src ="_images/madame.jpg" /><br /><br /><input type="button" value = "Ask your question" onclick="startFortune();" /></h2>
+
+</div><!-- end content -->
+
+
+
+
+
+</div> <!-- end container -->
+
+</div> <!-- end wrapper -->
+
+</body>
+</html>

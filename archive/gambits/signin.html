@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Sean's Gambits | Player Inventory</title>
+<link href="gambit.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="_includes/encrypt.js"></script>
+<script type="text/javascript" src="_includes/sign_in.js"></script>
+
+</head>
+<body onload="navigationFill(); footerFill();">
+
+
+<div id="wrapper">
+
+<div id="container">
+   <div id="leftCol">
+      <div id="nav">
+      </div> <!-- end nav -->
+
+      <div id="footer">
+      </div> <!-- end footer -->
+        <br />
+        <br />
+        <br />
+
+
+        <div id="left_results">
+        <h3><br />&nbsp;&nbsp;&nbsp;Your information<br /><br />
+            Your name: <br />
+               <span class = "result_list" id = "real_name">&nbsp;</span> <br /><br />
+            Username: <br />
+               <span class = "result_list" id = "user_name">&nbsp;</span> <br /><br />
+            Player points: <br />
+               <span class = "result_list" id = "user_points">&nbsp;</span> <br /><br />
+            Avatar: <br />
+               <span class = "result_list" id = "myavatar">&nbsp;</span><br />
+                <span class = "result_list" id = "avatar_img">&nbsp;</span><br /><br />
+            Weapons:<br />
+                <span class = "result_list" id = "weapon_one">&nbsp;</span> <br />
+                <span class = "result_list" id = "weapon_two">&nbsp;</span><br />
+                <span class = "result_list" id = "weapon_three">&nbsp;</span> <br /><br />
+            Supplies:<br />
+                <span class = "result_list" id = "supply_one">&nbsp;</span> <br />
+                <span class = "result_list" id = "supply_two">&nbsp;</span><br />
+                <span class = "result_list" id = "supply_three">&nbsp;</span> <br />
+                <span class = "result_list" id = "supply_four">&nbsp;</span><br />
+                <span class = "result_list" id = "supply_five">&nbsp;</span></h3>
+      </div><!-- end left_results -->
+
+   </div> <!-- end leftCol -->
+
+<div id="headerContent">
+   <img src="_images/headerImage.jpg" width="769px" height="136px" />
+</div>
+
+<div id="content">
+
+<h1><br />Tell Sean About You</h1>
+<h3 id="info_sign_in_text">
+   Here is the place in the process where it is all about you. Using some form fields
+   you can enter the information here that you would like to use while you are visiting this site. I hope that you
+   enjoy the simple games presented here on this site; they will progress into more eleborate games as time goes by
+   and, time allowing, the interface of these games will get more elaborate, but for now they are pretty simple.  These
+   games allow me to demonstrate a good understanding of XHTML, PHP, JavaScript, CSS, and handling user data, functions,
+   methods, site layout, as well as incorporating good design.
+   <br />
+   <br />
+   <br />
+   Use the form elements below to create your user name, avatar, and pick the related elements that  will aid you on your quest.<br />
+   Good Luck!<br />
+   <br />
+   <hr />
+</h3>
+<div id="main_signin">
+<form name = "inventory">
+   <div id="info_signin">
+        <fieldset><h3>Enter the following information:</h3>
+            <p><label>Your name:<br /></label>
+                <input type="text" id="realname" size = "40" value = ""/>
+                <input type ="button" onclick="getRealName('realname')" value = "ok"></button></p>
+            <p><label>Your username:<br /> </label>
+                <input type="text" id="username" size="40" value = ""/>
+                <input type ="button" onclick="getUsername('username')" value = "ok"></button></p>
+            <p><label>Points to date:<br /></label>
+                <input type="text" id="points" size = "10" value = ""/>
+                <input type ="button" onclick="getPoints('points')" value = "ok"></button></p>
+        </fieldset>
+    </div><!-- end info signin -->
+
+    <div id="radio_button">
+    <table width = "100%" border = "2"> <br />
+        <tr><td colspan = "5" class = "nobdr"><h3>Your Avatar</h3></td></tr>
+        <tr>
+            <td class="nobdr"><img src="_images/bunny.jpg" /></td>
+            <td class="nobdr"> <img src="_images/elf.jpg" /> </td>
+            <td class="nobdr"> <img src="_images/ghost.jpg" /></td>
+            <td class="nobdr"><img src="_images/princess.jpg" /></td>
+            <td class="nobdr"><img src="_images/wizard.jpg" /></td></tr>
+        <tr>
+            <td class="nobdr"><input type = "radio" name = "avatar" id = "bunny" value = "Bunny" onclick="pickAvatar('bunny')"/></td>
+            <td class="nobdr"><input type = "radio" name = "avatar" id = "elf" value = "Elf" onclick="pickAvatar('elf')"/></td>
+            <td class="nobdr"><input type = "radio" name = "avatar" id = "ghost" value = "Ghost" onclick="pickAvatar('ghost')"/> </td>
+            <td class="nobdr"><input type = "radio" name = "avatar" id = "princess" value = "Princess" onclick="pickAvatar('princess')"/></td>
+            <td class="nobdr"><input type = "radio" name = "avatar" id = "wizard" value = "Wizard" onclick="pickAvatar('wizard')"/> </td></tr>
+    </table>
+    </div> <!-- end radio_button -->
+
+    <div style="width: 50%; float: left;">
+        <fieldset>
+            <h3>Select three weapons to help you in your quest</h3>
+            <input type="checkbox" name="weapons" id="w0" value="Sword" />Sword<br />
+            <input type="checkbox" name="weapons" id="w1" value="Slingshot" />Slingshot<br />
+            <input type="checkbox" name="weapons" id="w2" value="Shield" />Shield<br />
+            <input type="checkbox" name="weapons" id="w3" value="Bow and 10 Arrows" />Bow and 10 Arrows<br />
+            <input type="checkbox" name="weapons" id="w4" value="3 Magic Rocks" />3 Magic Rocks<br />
+            <input type="checkbox" name="weapons" id="w5" value="Knife" />Knife<br />
+            <input type="checkbox" name="weapons" id="w6" value="Staff" />Staff<br />
+            <input type="checkbox" name="weapons" id="w7" value="Wizard's Wand" />Wizard's Wand<br />
+            <input type="checkbox" name="weapons" id="w8" value="Extra Arrows" />10 Extra Arrows<br />
+            <input type="checkbox" name="weapons" id="w9" value="Cloak of Invisibility" />Cloak of Invisibility<br />
+            <input type ="button" onclick="pickWeapons()" value = "Enter my selections" /></button>
+        </fieldset>
+    </div>
+
+    <div style="width: 50%; float: left;">
+        <fieldset>
+            <h3>Select five items to carry with you on your journeys</h3>
+            <input type="checkbox" name="supplies" id="s0" value="3-Day Food Supply" />3-Day Food Supply<br />
+            <input type="checkbox" name="supplies" id="s1" value="Backpack" />Backpack<br />
+            <input type="checkbox" name="supplies" id="s2" value="Kevlar Vest" />Kevlar Vest<br />
+            <input type="checkbox" name="supplies" id="s3" value="3-Day Water Bottle" />3-Day Supply of Water<br />
+            <input type="checkbox" name="supplies" id="s4" value="Box of 5 Firestarters" />Box of 4 Firestarters<br />
+            <input type="checkbox" name="supplies" id="s5" value="Tent" />Tent<br />
+            <input type="checkbox" name="supplies" id="s6" value="First Aid Kit" />First Aid Kit<br />
+            <input type="checkbox" name="supplies" id="s7" value="Warm Jacket" />Warm Jacket<br />
+            <input type="checkbox" name="supplies" id="s8" value="3 Pairs Extra Socks" />3 Pairs Extra Socks<br />
+            <input type="checkbox" name="supplies" id="s9" value="Pen and Notebook" />Pen and Notebook<br />
+            <input type ="button" onclick="pickSupplies()" value = "Enter my selections" /></button>
+        </fieldset>
+    </div>
+
+
+
+    <div><br /><input type="reset" value="Clear the form and Start Over"><br /></div>
+
+</form><!-- end inventory form -->
+</div><!-- end main_signin -->
+
+
+</div> <!-- end content -->
+
+</div> <!-- end container -->
+
+</div> <!-- end wrapper -->
+
+</body>
+</html>

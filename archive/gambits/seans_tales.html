@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<script type="text/javascript" src="_includes/encrypt.js"></script>
+<title>Sean's Tales</title>
+<link href="gambit.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+      function startGame()
+      {  var gender = "boy";
+         var city = " ";
+         var monster = " ";
+         var food = " ";
+         var drink = " ";
+
+         numYears = prompt("Enter a number greater than 0: ");
+         gender = prompt("Is the story about a boy or a girl? ");
+         letter = gender.charAt(0);
+         gender = (letter == "b" || letter == "B")?"boy":"girl";
+         pronoun = (gender == "boy")?"he":"she";
+         name = prompt("Enter the hero's name: ");
+         city = prompt("Enter the name of a city: ");
+         monster = prompt("Enter a type of monster: ");
+         food = prompt("Enter a food you like: ");
+         drink = prompt("Enter a drink you like: ");
+
+      document.getElementById("content").innerHTML =(
+               "<h2>Once upon a time, about "
+               + numYears + " years ago, there was a "
+               + gender + " named " + name + "."
+               + name + " lived in a small cabin in the woods just outside "
+               + city + " limits.</h2><h2>"
+               + name + " enjoyed walking in the woods every day until... One day "
+               + pronoun + " came upon a "
+               + monster + " sitting on a log eating a "
+               + food + ".</h2> <h2>The "
+               + monster + " jumped up, spilling his "
+               + drink + ". "
+               + name + " ran home as fast as "
+               + pronoun + " could but the "
+               + monster + " followed and ...</h2><h1>What happened? You decide! </h1> <h2>Ending 1: The "
+               + monster + " and " + name + " became best friends and lived in "
+               + name + "'s house happily ever after.</h2> <h2>Ending 2: The "
+               + monster + " overpowered "
+               + name + " and gobbled down all the "
+               + food + " and " + drink + " in " + name + "'s refrigerator.</h2> <h2>Ending 3: "
+               + name + " screamed mean things at the " + monster + ", causing the "
+               + monster + " to turn and run back to the woods never to be seen again.</h2>");}
+</script>
+
+<script type="text/javascript">
+function startGameTwo()
+      {
+         var badEmot = prompt("Enter a positive emotion ");
+         var goodEmot = prompt("Enter a negative emotion ");
+         var favNumber = prompt("Enter a Number");
+         var name = prompt("Enter a Name");
+         var favObject = prompt("Enter your favorite item");
+         var nameColor = prompt("Enter a color");
+
+         document.getElementById("content").innerHTML =("<h2>You are my " +favObject+ " my only " +favObject+ " You make me " +goodEmot+ " when times are " +nameColor+ " You'll never know "
+         +name+ " how much I " +badEmot+ " " +name+ " Please dont take my " +favObject+ " away. Sing it " +favNumber+ " more times! </h2>");
+
+      }
+</script>
+
+</head>
+<body onload="navigationFill(); footerFill();">
+
+<div id="wrapper">
+
+<div id="container">
+   <div id="leftCol">
+      <div id="nav">
+      </div> <!-- end nav -->
+
+      <div id="footer">
+      </div> <!-- end footer -->
+   </div> <!-- end leftCol -->
+
+<div id="headerContent">
+   <img src="_images/headerImage.jpg" width="769px" height="136px" />
+</div>
+
+<div id="content">
+   <h1>Sean's Tales</h1>
+   <br   />
+   <h3>For this game, you will create a story by entering words as   prompted. The story will change each
+         time you run this game, as you enter different words. You have Two worlds to choose from.</h3>
+      <p>&nbsp;</p>
+      <input type="button" value="Story One" onclick="startGame()" />
+      <input type="button" value="Story Two" onclick="startGameTwo()" />
+</div><!-- end content -->
+
+
+
+
+
+</div> <!-- end container -->
+
+</div> <!-- end wrapper -->
+
+</body>
+</html>

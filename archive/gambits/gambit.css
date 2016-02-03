@@ -1,0 +1,291 @@
+
+
+a {
+   text-decoration: none;
+   font-size:large;
+   color: #111111;
+}
+
+a:hover { color:#999999;
+}
+h1 {
+   padding-left:10px;
+   line-height: 50px;
+}
+
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   background-color: #000000;
+   
+}
+
+
+#container{
+   max-height: 578px;
+
+
+}
+
+#wrapper {
+   padding-top: 50px;
+   background: url(_images/topHoney.jpg) repeat;
+   width: 1024px;
+   margin:auto;
+   }
+   
+#leftCol {
+   background: url(_images/leftSide.jpg) no-repeat;
+   float: left;
+   min-width: 255px;
+   min-height: 714px;
+}
+
+#headerContent {
+
+   background: url(_images/headerImage.jpg) no-repeat; max-height:136px;
+   
+}
+
+
+#content {
+   margin-top: 0px;
+   margin-left:255px;
+   min-width: 578px;
+   min-height:578px;
+   max-height:578px;
+   background: url(_images/mainContent.jpg) no-repeat;
+   padding-top: 15px;
+   padding-left: 10px;
+   padding-right: 50px;
+   color:#858585;
+   font-size:small;
+   letter-spacing: 1px;
+   line-height:20px;
+   text-align:justify;  
+}
+
+#canvas {
+   margin:0;
+   text-align:center;
+}
+
+#content_tictactoe {
+   margin-top: 0px;
+   margin-left:255px;
+   min-width: 578px;
+   min-height:578px;
+   max-height:578px;
+   background: url(_images/tic_content_04.jpg) no-repeat;
+   padding-top: 15px;
+   padding-left: 10px;
+   padding-right: 50px;
+   color:#858585;
+   font-size:small;
+   letter-spacing: 1px;
+   line-height:20px;
+   text-align:justify;  
+}
+
+#content a {
+   color: #858585;
+}
+#content a:hover {
+   color: #fca430;
+}
+#content button {
+   width: 250px;
+   color: #858585;
+   background-color: #111111;
+   border-color: #000000;
+}
+
+#contentAbout {
+   text-align:center;
+   font-size:x-large;
+}
+
+#contentAbout button {
+   width: 250px;
+   color: #858585;
+   background-color: #111111;
+   border-color: #000000;
+}
+
+#contentMenu a {
+   color: #858585;
+}
+#contentMenu a:hover {
+   color: #fca430;
+}
+
+#madameAnswer {
+   text-align: center;
+   padding-top: 100px;
+   padding-bottom: 100px;
+   line-height: 50px;
+   color: #fca430;
+}
+#madameAnswerTop {
+   text-align: center;
+   padding-top: 25px;
+   padding-bottom: 25px;
+   line-height: 40px;
+   color: #111111;
+}
+
+
+#nav {
+   text-align: right;
+   padding-top: 250px;
+   padding-right: 75px;
+   line-height: 3;
+}
+
+#footer {
+   padding-top:15px;
+   padding-right: 50px;
+   text-align: center;
+   font-size:x-small;
+   color: #111111;
+
+}
+
+.contentText {
+
+}
+
+#centerContent{
+   padding-top:100px;
+   text-align:center;
+}
+
+#centerContent button{
+   width: 160px;
+   color: #858585;
+   background-color: #111111;
+   border-color: #000000;
+}
+
+.centerContentH{
+   padding-top:30px;
+   text-align:center;
+}
+.centerContentT {
+   padding-top:5px;
+   text-align:center;
+}
+
+.centerContentT a {
+   color:#2a7d47;
+}
+
+.centerContentT a:hover {
+   color:#dce305;
+}
+
+.hangman_letters {
+   padding:5px;
+   text-align:center;
+   color:#2a7d47;
+   font-size:24px;
+}
+
+#redText {
+   color: #b30000;
+}
+
+#greenText {
+   color: #2a7d47;
+}
+#yellowText {
+   color: #dce305;
+}
+
+#left_results
+{
+   color:#999;
+}
+
+#info_sign_in_text
+{
+   line-height:2em;
+}
+#main_signin
+{
+   padding-top: 50px;
+}
+
+.floatright {
+   float:right;
+   padding-left:20px;
+          }
+.floatleft {
+   float:left;
+   padding: 30px 0px 20px;
+}
+.nobdr {
+   boder-colapse: colaspe;
+   border:none;   
+}
+
+.result_list
+{
+   color: #dce305;
+   padding-left:15px;
+}
+#testline 
+{
+   color:#858585;
+   font-size:xx-small;
+}
+
+.hangman_letters {
+   color: #dce305;
+   text-align:center;
+   font-size:xx-large;
+}
+.used_letters {
+   color:#b30000;
+   text-align:center;
+   font-size:large;
+}
+#hint_link {
+   color:#2a7d47;
+}
+
+#hint_text {
+   color:#2a7d47;
+}
+.centerContentSG {
+   padding-top:5px;
+   text-align:center;
+}
+
+.centerContentSG a {
+   color:#0066CC;
+}
+
+.centerContentSG a:hover {
+   color:#dce305;
+}
+#SGmenu {
+   color:#0066CC; 
+}
+
+#SGmenu:hover {
+   color:#06F;
+}
+/*boggle layout*/
+
+#timer_clock {
+   text-align:right;
+   color:#b30000;
+}
+#ng:hover{
+   cursor:pointer;
+   color:#dce305;
+}
+#timer_clock:hover{
+   cursor:pointer;
+   color:#dce305;
+}

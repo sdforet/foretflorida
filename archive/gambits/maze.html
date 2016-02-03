@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<title>Sean's Gambits</title>
+<link href="gambit.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="_includes/encrypt.js"></script>
+
+</head>
+<body onLoad="navigationFill(); footerFill();">
+
+<span id="dummy"></span>
+<div id="wrapper">
+
+<div id="container">
+   <div id="leftCol">
+      <div id="nav">
+      </div> <!-- end nav -->
+
+      <div id="footer">
+      </div> <!-- end footer -->
+   </div> <!-- end leftCol -->
+
+<div id="headerContent">
+   <img src="_images/headerImage.jpg" width="769px" height="136" />
+</div>
+
+    <div id="content">
+
+    <h3>Maze Game</h3>
+    <p style="text-align:center">Welcome to the Maztrix... Not really. Here is just a simple maze game using HTML 5
+    elements and a little nostalgic controls thrown in for effect.  You can use the keyboard's number pad
+    (if so equiped)<br /> 8=up | 2=down | 4=left | 6=right<br />Control the green square with the number pad
+    and guide it through the maze or you can use the d-pad on the SF controller. The start button resets the
+    board and your position. Have fun!</p>
+    <table align="center" cellpadding="5px" bgcolor="#333333">
+        <tr><td><canvas id="canvas" width="482" height="482">
+        <p>Your browser does not support HTML5 Canvas. Sorry.</p>
+        </canvas></td></tr>
+      <tr><td><img src="_images/gamecontroller482.jpg" width="482" border="0" usemap="#Map"/></td></tr>
+     </table>
+     <p>&nbsp;</p>
+
+   </div> <!-- end content -->
+<script type="text/javascript" src="_includes/maze.js"></script>
+
+</div> <!-- end container -->
+</div> <!-- end wrapper -->
+
+<map name="Map">
+  <area shape="circle" coords="81,85,17" href="javascript:up()" alt="up controller">
+  <area shape="circle" coords="81,155,16" href="javascript:down()" alt="down controller">
+  <area shape="circle" coords="46,118,17" href="javascript:left()" alt="left controller">
+  <area shape="circle" coords="118,118,16" href="javascript:right()" alt="right controller">
+  <area shape="rect" coords="224,136,282,169" href="javascript:startbutton()" alt="start button">
+</map>
+</body>
+</html>

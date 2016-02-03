@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+<title>Sean's Gambits | Encoder</title>
+<link href="gambit.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="_includes/encrypt.js"></script>
+
+</head>
+
+<body onload="navigationFill(); footerFill();">
+
+<div id="wrapper">
+
+<div id="container">
+   <div id="leftCol">
+      <div id="nav">
+      </div> <!-- end nav -->
+
+      <div id="footer">
+      </div> <!-- end footer -->
+   </div> <!-- end leftCol -->
+
+<div id="headerContent">
+   <img src="_images/headerImage.jpg" width="769px" height="136px" />
+</div>
+
+<div id="content">
+   <h2>Write A Message and Encode It</h1>
+      <p>This algorithm uses simple substitution on the ASCII character values entered by the user.
+         Notice that each time you encode the same line of text the result is the same. This is static encrytion.</p>
+
+      <h3 class="centerContentH"><a href="javascript:encodeIt()" >Click to Enter a Message</a></h3>
+
+      <table cellpadding="2" width="90%" align="center" border="1">
+         <tr><td align="center" id="secret"><p>encoded message</p></td></tr>
+         <tr><td align="center" id="message"><p>original message</p></td> </tr>  </table>
+<br />
+<br />
+   <h2>Write A Message and Super Encode It</h1>
+      <p>This algorithm still uses simple ASCII character value swapping but adds an additional key, which is determined by the system,
+         to the encrytion process so that the result of each instance of the function is different. This is dynamic encryption.</p>
+
+      <h3 class="centerContentH"><a href="javascript:superEncodeIt()" >Click to Enter a Message</a></h3>
+
+      <table cellpadding="2" width="90%" align="center" border="1">
+         <tr><td align="center" id="secret2"><p>encoded message</p></td></tr>
+         <tr><td align="center" id="message2"><p>original message</p></td> </tr>
+         <tr><td align="center" id="decryptionKey"><p>decryption key</p></td> </tr>  </table>
+
+
+
+</div> <!-- end content -->
+
+</div> <!-- end container -->
+
+</div> <!-- end wrapper -->
+
+</body>
+</html>

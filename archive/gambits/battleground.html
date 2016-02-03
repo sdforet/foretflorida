@@ -1,0 +1,131 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="_includes/encrypt.js"></script>
+<link href="gambit.css" rel="stylesheet" type="text/css" />
+<title>Sean's Gambits | Troll Battle</title>
+
+<script type="text/javascript">
+function battleIt()
+	{
+		var heroPlay = 0; var trollPlay = 0;
+		var heroPts = 100; var trollPts = 100;
+		var rocks = "magic rocks"; var sword = "the sword";
+		var arrow = "bow and arrow";
+		var heroChoice = " "; var trollChoice = " ";
+		document.getElementById("trollPts").innerHTML = (trollPts);
+		document.getElementById("heroPts").innerHTML = (heroPts);
+		document.getElementById("playerWeapon").innerHTML = ("Your weapon: ");
+		document.getElementById("trollWeapon").innerHTML = ("The troll's weapon: ");
+		document.getElementById("winner").innerHTML = ("&nbsp;");
+//loop repeats until troll or player get 130 points
+		while ((trollPts < 130) && (heroPts < 130))
+			{
+			// get player's weapon
+				heroPlay = parseInt(prompt("What weapon do you choose? Enter 1 for magic rocks, 2 for the sword, or 3 for the bow and arrow: (Enter 4 exit)" , " "));
+						if (heroPlay == 4) break;
+			// get troll's weapon
+						trollPlay = Math.floor(Math.random() * 3 + 1);
+			// assign weapon to player and troll
+						if (trollPlay == 1)
+							trollChoice = rocks;
+						if (trollPlay == 2)	
+							trollChoice = sword;
+						if (trollPlay == 3)
+							trollChoice = arrow;
+						if (heroPlay == 1)
+							heroChoice = rocks;
+						if (heroPlay == 2)
+							heroChoice = sword;
+						if (heroPlay == 3)
+							heroChoice = arrow;
+			//display weapon selections
+						document.getElementById("playerWeapon").innerHTML = ("Your weapon: " + heroChoice);
+						document.getElementById("trollWeapon").innerHTML = ("The troll's weapon: " + trollChoice);
+						alert("This round of the battle begins now!");
+			//find the winner
+				if (((trollPlay == 1)&&(heroPlay == 3)) || ((trollPlay== 2)&&(heroPlay == 1)) || ((trollPlay== 3)&&(heroPlay == 2)))
+					{
+						document.getElementById("winner").innerHTML = ("<img src='images/troll.jpg' />");
+						trollPts = trollPts + 10;
+						heroPts = heroPts - 10;
+						document.getElementById("trollPts").innerHTML = (trollPts);
+						document.getElementById("heroPts").innerHTML = (heroPts);
+					}
+				if (((heroPlay == 1)&&(trollPlay == 3)) || ((heroPlay == 2)&&(trollPlay == 1)) || ((heroPlay == 3)&&(trollPlay == 2)))
+					{
+						document.getElementById("winner").innerHTML = ("<img src='images/wizard.jpg' />");
+						trollPts = trollPts - 10;
+						heroPts = heroPts + 10;
+						document.getElementById("trollPts").innerHTML = (trollPts);
+						document.getElementById("heroPts").innerHTML = (heroPts);
+					}
+				if (((heroPlay == 1)&&(trollPlay == 1)) || ((heroPlay == 2)&&(trollPlay == 2)) || ((heroPlay == 3)&&(trollPlay == 3)))
+					{
+						document.getElementById("winner").innerHTML =("This round is a tie. New weapons must be chosen...");
+					}
+			}
+//display the final winner
+	if (heroPlay == 4)
+		document.getElementById("winner").innerHTML = ("It's true: when you run, you live to fight another day. See you again soon!");
+	if (trollPts >= 130)
+		document.getElementById("winner").innerHTML = ("The battle has been fought valiently but the troll has beaten you. Go home and nurse your wounds.");
+	if (heroPts >= 130)
+		document.getElementById("winner").innerHTML = ("The battle has been fought valiently and you have prevailed! Congratulations!");
+	}
+</script>
+
+</head>
+
+<body onload="navigationFill(); footerFill();">
+
+	
+<div id="wrapper">
+
+<div id="container">
+	<div id="leftCol">
+		<div id="nav">
+		</div> <!-- end nav -->
+		
+		<div id="footer">
+		</div> <!-- end footer -->
+	</div> <!-- end leftCol -->
+	
+<div id="headerContent">
+	<img src="_images/headerImage.jpg" width="769px" height="136px" />	
+</div>
+
+<div id="content">
+        <table width = "85%" cellpadding = "5" border = "0">
+                <tr>
+                    <td><img src = "_images/wizard.jpg" /></td>
+                    <td><img src = "_images/troll.jpg" /></td>
+                </tr>
+                <tr><td><span class="style1">Wizard uses: </span></td>
+                    <td><span class="style1">Troll uses: </span></td>
+                </tr>
+                <tr><td id = "playerWeapon" span class = "style1">Weapon goes here</span></td>
+                    <td id = "trollWeapon" span class = "style1">Weapon goes here</span></td>
+                </tr>
+                <tr><td colspan = 2><span class = "style1">The winner is:</span></td></tr>
+                <tr><td colspan = 2 id = "winner" align = "center" class ="style1">&nbsp;</td></tr>
+                <tr><td><span class = "style1">Wizard points: </span></td>
+                    <td><span class = "style1">Troll points:</span></td>
+                </tr>
+                <tr><td class = "style1" id = "heroPts">100</td>
+                    <td class = "style1" id = "trollPts">100</td>
+                </tr>
+                <tr><td><input type = "button" id = "battle" value = "Let the battle begin!" onclick = "battleIt()"; /> </td>
+                    <td><input type = "button" id = "return" value = "Return to battle instructions" onclick = "location.href = 'sean_battle.html'"; /></td>
+                </tr>
+        </table>
+</div> <!-- end content -->
+
+
+</div> <!-- end container -->
+
+</div> <!-- end wrapper -->
+
+</body>
+</html>
