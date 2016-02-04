@@ -5,7 +5,10 @@ body {
     padding-top: 70px;
     padding-bottom: 30px;
 }
-
+html {
+   overflow: -moz-scrollbars-vertical;
+   overflow-y: scroll;
+}
 .theme-dropdown .dropdown-menu {
     position: static;
     display: block;
@@ -42,4 +45,4 @@ label.control-label span {
     pointer-events: none;
     cursor: no-drop;
     color: #888;
-} 
+}
