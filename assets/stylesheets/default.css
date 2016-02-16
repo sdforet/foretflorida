@@ -22,6 +22,14 @@ html {
 .theme-showcase .navbar .container {
     width: auto;
 }
+
+.education-section img {
+   float: left;
+   margin-right: 10px;
+   opacity: .4;
+}
+
+
 .date-form {
     margin: 10px;
 }

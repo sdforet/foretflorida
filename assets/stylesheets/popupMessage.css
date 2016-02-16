@@ -1,0 +1,65 @@
+.popupShader {
+   display: none;
+   position: absolute;
+   width: 100%;
+   height: 150%;
+   top: 0px;
+   left: 0px;
+   background-color: black;
+   opacity: .8;
+   filter:alpha(opacity=50); /*IE8*/
+   z-index: 1500;
+}
+.popupMessage {
+   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+   display: none;
+   border: 2px solid #222;
+   border-radius: 4px;
+   padding-bottom: 5px;
+   text-align: center;
+   position: absolute;
+   background-color: #DADCDC;
+   box-shadow: 1px 1px 10px #888;
+   z-index: 2000;
+}
+.popupMessage h3 {
+   background-image: linear-gradient(to bottom,#3c3c3c 0,#222 100%);
+   margin: 0px 0px 10px;
+   color: white;
+   padding: 5px;
+}
+.popupMessage .msgText {
+   padding: 10px;
+   font-size: 14px;
+   font-weight: bold;
+}
+.popupMessage .msgButton {
+   background-image: linear-gradient(to bottom,#337ab7 0,#265a88 100%);
+   border: 1px solid #265a88;
+   border-radius: 3px;
+   color: white;
+   cursor: pointer;
+   width: 30%;
+   margin: 5px auto;
+   font-weight: bold;
+   padding: 5px 15px;
+}
+.popupMessage .msgButton:hover {
+   background-image: linear-gradient(to bottom,#265a88 0,#265a88 100%);
+}
+.popupMessage label {
+   padding-left: 4px;
+   font-size: 11px;
+   cursor: pointer;
+}
+.popupMessage input {
+   width: 13px;
+   height: 13px;
+   padding: 0;
+   margin:0;
+   vertical-align: bottom;
+   position: relative;
+   top: -6px;
+   cursor: pointer;
+   *overflow: hidden;
+}
