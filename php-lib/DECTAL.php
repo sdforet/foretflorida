@@ -101,6 +101,26 @@ abstract class DECTAL extends PHPTAL
         $this->js = array_unique($this->js);
     }
 
+   /**
+    * Magical set extended to be used for the inner template rather than $this.
+    *
+    * Inner template must be set by Decorator constructor.
+    * This will allow you to set/pass variables to the inner template
+    * @param string
+    * @param mixed
+    * @throws CannotCreateTemplateException if no inner template is set
+    */
+   public function __set($key, $val) {
+      if (!isset($this->_sub_template)) {
+         throw new CannotCreateTemplateException (
+            'Error in ' . __METHOD__
+            . 'No sub template found. '
+            . 'Magical set can only be applied to inner template'
+         );
+      }
+      $this->_sub_template->set($key, $val);
+   }
+
     /**
      * Initialize default data and execute the template.
      *
@@ -124,8 +144,8 @@ abstract class DECTAL extends PHPTAL
         else if (empty($this->body)) {
             throw new CannotCreateTemplateException(
                 'Error in ' . __METHOD__
-                . "\nNo inner template found.  Blank page.
-                Please set an inner template file with the constructor or setTemplate() method"
+                . 'No inner template found. '
+                . 'Please set an inner template file with the constructor or setTemplate() method'
             );
         }
         foreach (get_object_vars($this) as $key => $val) {

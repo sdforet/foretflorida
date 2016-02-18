@@ -1,32 +1,36 @@
 /**
- * Simple plugin to allow custom popup messages to be used with/without a 12hr cookie.
+ * Function-Based JavaScript Object to build custom popup messages, with/without cookies.
  *
  * Sample usage within your js page's document.ready()
  *    var message = new PopupMessage();
  *    message.init({
- *       cookie: bool, (uses a 12hr by default)
- *       cookieName: 'string' (if you are using more than one, give each a unique name)
- *       title: 'string',
- *       message: 'string',
- *       button: 'string'
+ *       title: 'string',       // required
+ *       message: 'string',     // required
+ *       button: 'string'       // required
+ *       cookie: bool,          // optional, default=false
+ *       cookieName: 'string',  // optional, default=popupMessage (use unique name in each multi-instance)
+ *       customCss: 'string'    // optional, can add unique class name to each instance for custom css
  *    });
  *
- * Requires the following:
+ * Include the following files in addition to this plugin:
  *    jquery-1.11.1.min.js
  *    jquery.cookie.js
- *    popupMessage.css
+ *    popupMessage.css          // overite in your own css to customize the look of the popup
  */
 
 function PopupMessage() {
 
    var
-      title = '',
-      message = '',
-      button = '',
       popup = '',
-      cookie = false,
-      cookieName = '',
-      error = false
+      error = false,
+      options = {
+         title: '',
+         message: '',
+         button: '',
+         cookie: false,
+         cookieName: '',
+         customCss: ''
+      }
    ;
 
    /**
@@ -34,7 +38,8 @@ function PopupMessage() {
     *
     * @param object three properties are required, {title:'' message:'' button:''}
     */
-   this.init = function(options) {
+   this.init = function(userOptions) {
+      options = $.extend(options, userOptions);
 
       cookie = checkCookie(options);
       if (cookie) {
@@ -46,25 +51,20 @@ function PopupMessage() {
          return false;
       }
 
-      // set the required properties for popupMessage
-      title = options.title;
-      message = options.message;
-      button = options.button;
-
       // build the html, and start the event handler
-      popup = buildPopup();
+      buildPopup();
       popupHandler();
    }
 
    /**
-    * if this instance wants a cookie, check for the provided/default name
+    * if this instance wants a cookie, check for a provided name or use default
     *
     *@return boolean
     */
     function checkCookie(options) {
       if (options.cookie === true) {
-         cookieName = options.cookieName ? options.cookieName : 'popupMessage';
-         return $.cookie(cookieName);
+         options.cookieName = options.cookieName ? options.cookieName : 'popupMessage';
+         return $.cookie(options.cookieName);
       }
       return false;
     }
@@ -83,26 +83,26 @@ function PopupMessage() {
          return true;
       }
       return false;
-    }
+   }
 
    /**
     * set event handlers for the popup message
     */
    function popupHandler() {
-      //display the popup
-      $('body').append(popup);
       $('.popupMessage').fadeToggle('fast');
       $('.popupShader').fadeToggle('slow');
+
       //center the popup and keep it centered when the user changes the browser size
       $('.popupMessage').center();
       window.onresize = function(event) {
          $('.popupMessage').center();
       };
+
       //dismiss the popup and set a cookie
       $('.msgButton').click( function() {
          $('.popupMessage').fadeToggle('slow');
          $('.popupShader').fadeToggle('slow');
-         setPopupMessageCookie(cookieName);
+         setPopupMessageCookie(options.cookieName);
       });
    }
 
@@ -112,44 +112,26 @@ function PopupMessage() {
     * @return string valid html for the popup
     */
    function buildPopup() {
-      var h = makeTag('div', {class: 'popupShader'});
-      h += '<div class="popupMessage">';
-      h += makeTag('h3', title, {class: 'msgTitle'});
-      h += makeTag('p', message, {class: 'msgText'});
-      h += makeTag('div', button, {class: 'msgButton'});
-      h += makeTag('input', {type: 'checkbox', id: 'permDismiss'});
-      h += makeTag('label', 'Permanently Dismiss', {for: 'permDismiss'})
-      h += '</div>';
-      return h;
+      var
+         shdr = $("<div></div>").addClass('popupShader'),
+         mTtl = $("<h3></h3>").text(options.title).addClass('msgTitle'),
+         mTxt = $("<p></p>").addClass('msgText'),
+         mBtn = $("<div></div>").text(options.button).addClass('msgButton'),
+         mCbx = (options.cookieName) ? $('<input></input>').attr({type:'checkbox',id:'permDismiss'}) : '',
+         mLbl = (options.cookieName) ? $('<label></label>').text('Hide Permanently').attr({for:'permDismiss'}) : '',
+         html = $("<div></div>").append(mTtl, mTxt, mBtn, mCbx, mLbl).addClass('popupMessage ' + options.customCss),
+         mesg = $.parseHTML(options.message)
+      ;
+      //display the popup
+      $('body').append(shdr, html);
+      $('.msgText').append(mesg);
    }
 
    /**
-    * helper function to build individual html tags with attributes and text
-    *
-    * @param string valid html tag
-    * @param string text to be included between tags
-    * @param object attributes with values to be included in the html tag
-    * @return string valid html element
-    */
-   function makeTag(tag, html, attrs) {
-      if (typeof(html) != 'string') {
-         attrs = html;
-         html = null;
-      }
-      var h = '<' + tag;
-      for (attr in attrs) {
-         if(attrs[attr] === false) continue;
-         h += ' ' + attr + '="' + attrs[attr] + '"';
-      }
-      return h += html ? ">" + html + "</" + tag + ">" : "/>";
-   }
-
-   /**
-    * set a permanent or 12hr cookie
+    * set a 1-year or 12-hour cookie
     */
    function setPopupMessageCookie(cookieName) {
       var
-         cookieName = cookieName+'=',
          now = new Date(),
          time = now.getTime()
       ;
@@ -180,10 +162,11 @@ jQuery.fn.center = function () {
 $(document).ready(function() {
    popup = new PopupMessage();
    popup.init({
+      title: 'Heed my Warning',
+      message: 'Testing a new notification system<br />using the custom made plugin "PopupMessage.js"!',
+      button: 'Pop Off',
       cookie: true,
       cookieName: 'fflPopupMessage',
-      title: 'Heed my Warning',
-      message: 'Testing the execution of a notification system<br />using the custom made plugin "PopupMessage"! ',
-      button: 'Pop Off'
+      customCss: 'newClassName'
    });
 });
