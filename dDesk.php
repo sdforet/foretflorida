@@ -15,7 +15,7 @@ $page->js(
     'javascript/PopupMessage'
 );
 $page->title('Developer Desk');
-$page->deskHighlight = true;
+$page->setVarVal('dskHL', true);
 
 $codeSampleHtml = <<<HTML
    <div class="form-group">
@@ -27,8 +27,6 @@ $codeSampleHtml = <<<HTML
       </div>
    </div>
 HTML;
-
-
 
 $page->codeSampleHtml = $codeSampleHtml;
 

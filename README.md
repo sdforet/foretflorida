@@ -1,12 +1,3 @@
 # foretflorida
-a simple repo to help track changes 1-18-15
+This git repo holds a portfolio site for Sean D Foret. Thie site can be visited directly at [ForetFlorda.com](http://foretflorida.com "Sean's portfolio site.").
 
-Assets:
-- bootstrap
-- jquery 2.2.0
-- phptal
-
-PHPTAL implmentation
-- template directory /templates/
-- Decorator extends DECTAL extends PHPTAL
-- additional documentation at [PHPTAL.org](http://phptal.org/)

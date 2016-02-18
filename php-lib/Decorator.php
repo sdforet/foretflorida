@@ -7,6 +7,8 @@ require_once "php-lib/DECTAL.php";
 
 class DECORATOR extends DECTAL
 {
+    protected $dskHL = false;
+    protected $resHL = false;
 
     public function __construct($template = NULL)
     {
@@ -23,5 +25,9 @@ class DECORATOR extends DECTAL
         $this->setTemplate("base.xhtml");
         // comment out afer final deployment (this method clears TAL cache)
         $this->cleanUpCache();
+    }
+
+    public function setVarVal($var, $val) {
+       $this->$var = $val;
     }
 }
