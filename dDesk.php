@@ -6,7 +6,8 @@ $page->css(
     'bootstrap-datetimepicker/css/bootstrap-datetimepicker',
     'stylesheets/jquery-ui/jquery-ui',
     'stylesheets/default',
-    'stylesheets/popupMessage'
+    'stylesheets/popupMessage',
+    'stylesheets/dDesk'
 );
 $page->js(
     'javascript/jquery-ui.min',

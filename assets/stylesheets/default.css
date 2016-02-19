@@ -4,6 +4,8 @@
 body {
     padding-top: 70px;
     padding-bottom: 30px;
+    background-color: #f7f7f7;
+    background-image: url('../images/background.gif');
 }
 html {
    overflow: -moz-scrollbars-vertical;
@@ -23,13 +25,16 @@ html {
     width: auto;
 }
 
+.page-header {
+   border-bottom: 2px solid #e9e9e9;
+}
+
 .education-section img {
    float: left;
    margin-right: 10px;
    opacity: .4;
 }
-
-
+/* WeekPickerStyles */
 .date-form {
     margin: 10px;
 }
@@ -57,7 +62,6 @@ label.control-label span {
 
 
 /* ZeroClipboard styles */
-
 .zero-clipboard {
     position: relative;
     display: none;
