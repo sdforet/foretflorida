@@ -1,0 +1,11 @@
+/* dDesk.php */
+.dDesk .col-md-2 > h1:nth-child(1) {
+   padding: 0px;
+   margin: 0px;
+   font-size: 25px;
+}
+.dDesk pre.prettyprint {
+   margin: 3px;
+   border: 1px solid #ccc;
+   background-color: #F9F9F9;
+}
