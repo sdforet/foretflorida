@@ -1,0 +1,66 @@
+<div class="container panel panel-default dDesk">
+   <div class="row">
+      <div class="panel-body">
+         <div class="col-md-2">
+            <h1 class="text-center"><img src="assets/images/icons/twig_icn.png" /><br />TWIG</h1>
+         </div>
+         <div class="col-md-10">
+            <p>
+               TWIG is the self-described "flexible, fast, secure, template engine for PHP". I am sure that
+               this is a valid description given it's wide acceptance in the Symfony community. I have found
+               that twig is can be as helpful and developer friendly as other templateing engines.
+               The main benefit to using twig is an extensive tag/filter/function/test library that it includes.
+               According to twig, it violates separation of resposibilities to  use <code>strtoupper()</code>
+               in PHP so they provide their syntax filter  <code>{{ 'welcome'|upper }}</code> to use in the
+               template.  They provide a good number of similar features to alter the information passed to the
+               template, some of which border on buisness logic in the template. Of course you don't have to use
+               any of these, and other template engines also include many logical filters in their engines as well.
+            </p>
+         </div>
+      </div>
+      <div class="panel-body clearfix">
+         <div class="col-md-4">
+            <p><strong>Using Templates</strong></p>
+            <ol>
+               <li>Templates must be named with double extension ".html.twig"</li>
+               <li>The base template is evaluated first</li>
+               <li>Child templates can overwrite the parent's blocks with content of their own (only one level)</li>
+               <li>If it is not in a block, it will not be replaced</li>
+               <li>Child templates must declare what they're overwriting by using the extends tag</li>
+               <li>Variables are not scoped to included templates such as macros that are not in the same file (bad)</li>
+            </ol>
+         </div>
+         <div class="col-md-3">
+            <p><strong>Three types of syntax in Twig:</strong></p>
+            <ol>
+               <li>{% ... %} "Do Something": executes statements like conditional logic and for loops</li>
+               <li>
+                  {{ ... }} "Say Something": print this route of variable or expression; filters use pipe
+               </li>
+               <li>{# ... #} "Comment": results of a comment aren't displayed</li>
+            </ol>
+         </div>
+
+         <div class="col-md-5">
+            <pre class="prettyprint">
+@file sample.html.twig
+
+{# loop through the array with values #}
+{% for info in array %}
+   &lt;h3&gt;{{ info.name }}&lt;/h3&gt;
+   &lt;p&gt;{{ info.description }}&lt;/p&gt;
+   {# loop through the innerArray for this info #}
+   {% for deepInfo in info.items %}
+      {{ deepInfo.name }}
+      {% if deepInfo.active == true %}
+         &lt;span&gt;Show this text!&lt;/span&gt;
+      {% endif %}
+      &lt;p&gt;{{ deepInfo.description|raw }}&lt;/p&gt;
+   {% endfor %}
+   &lt;hr /&gt;
+{% endfor %}
+            </pre>
+         </div>
+      </div>
+   </div>
+</div>

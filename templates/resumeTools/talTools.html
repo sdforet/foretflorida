@@ -1,0 +1,82 @@
+<div class="container panel panel-default dDesk">
+   <div class="row">
+      <div class="panel-body">
+         <div class="col-md-2">
+            <h1 class="text-center"><img src="assets/images/icons/phptal_icn.png" /><br />PHPTAL</h1>
+         </div>
+         <div class="col-md-10">
+            <p>
+               PHPTAL is a templating engine for PHP. It has many benefits such as: separation of logic and
+               presentation, a robust macro system, no speed loss, fails with helpful warnings for the developer,
+               and forces production of clean XHTML. These and many other advangates of PHPTAL are listed on the
+               group's site: <a target="_blank" href="http://www.phptal.org">PHPTAL.org</a>.
+            </p>
+         </div>
+      </div>
+      <div class="panel-body clearfix">
+         <div class="col-md-4">
+            <pre class="prettyprint">
+@file samplePage.php
+
+/**
+ * the "new" object will identify
+ * an inner template passed as an
+ * argument, which is inserted into
+ * a parent template identified by
+ * the class
+ */
+require_once "php/Decorator.php";
+$page = new Decorator('myPage.xhtml');
+/**
+ * any buisness logic will reside
+ * here and get passed to the
+ * page object
+ */
+echo $page->execute();
+               </pre>
+            </div>
+            <div class="col-md-4">
+               <pre class="prettyprint">
+@file mainTemplate.xhtml
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+   &lt;head&gt;
+       ...stuff
+   &lt;/head&gt;
+   &lt;body&gt;
+      ...navigation
+      ...any html you need
+      /**
+       * tal inserts sub-template here
+       */
+      &lt;tal:content="structure body" /&gt;
+      ...footer stuff
+   &lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+         </div>
+         <div class="col-md-4">
+            <pre class="prettyprint">
+@file myPage.xhtml
+
+&lt;!-- you can pretty much do
+   whatever valid html(5)
+   stuff you want here...
+   including some of the
+   following tal features.--&gt;
+&lt;tal:define="" /&gt;
+&lt;tal:condition="" /&gt;
+&lt;tal:repeat="" /&gt;
+&lt;tal:replace="" /&gt;
+&lt;tal:content="" /&gt;
+&lt;tal:attributes="" /&gt;
+&lt;metal:define-macro="" /&gt;
+&lt;metal:use-macro="" /&gt;
+&lt;metal:define-slot="" /&gt;
+&lt;metal:use-slot="" /&gt;
+            </pre>
+         </div>
+      </div>
+   </div>
+</div>

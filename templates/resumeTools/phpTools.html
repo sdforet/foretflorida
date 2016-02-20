@@ -1,0 +1,91 @@
+<div class="container panel panel-default dDesk">
+   <div class="row">
+      <div class="panel-body">
+         <div class="col-md-2">
+            <h1 class="text-center"><img src="assets/images/icons/php_icn.jpg" /></h1>
+         </div>
+         <div class="col-md-10">
+            <p>
+               According to <a target="_blank" href="http://www.php.net">PHP.net</a>,<i>"PHP is a popular
+               general-purpose scripting language that is especially suited to web development. Fast, flexible and
+               pragmatic, PHP powers everything from your blog to the most popular websites in the world."</i>
+               I agree, and have enjoyed working in this language. My skills have grown
+               as I developed many new modules, stand-alone managers, and refactored thousands of php files.
+               An example of refactoring inline php/html to use a templating class called PHPTAL is shown below.
+            </p>
+         </div>
+      </div>
+      <div class="panel-body clearfix">
+         <div class="col-md-7">
+            <h4>Refactor spaghetti code...</h4>
+            <pre class="prettyprint">
+@file newUser.php
+
+?php
+echo '&lt;h1&gt;New Users&lt;/h1&gt;';
+$sql = "SELECT * FROM users ORDER BY date_registered";
+$result = mysql_query($sql) or die(mysql_error());
+echo '&lt;table class="my-table-class"&gt;';
+while($row = mysql_fetch_assoc($result)){
+  echo '&lt;tr&gt;&lt;td&gt;'.$row['username'].'&lt;/td&gt;&lt;td&gt;'.$row['date_registered'].'&lt;/td&gt;&lt;/tr&gt;';
+}
+echo '&lt;/table&gt;';
+function someFunction($var){
+    $var = $var + 1;
+    return '&lt;span style="font-weight:bold;"&gt;' . $var . '&lt;/span&gt;';
+}
+$sql = "SELECT * FROM table WHERE column = 'test'";
+$result = mysql_query($sql) or die(mysql_error());
+echo '&lt;div id="test"&gt;';
+$i = 0;
+while($row = mysql_fetch_assoc($result)){
+  if($row['type'] == 3){
+     echo '&lt;div style="margin-bottom:20px;"&gt;'.someFunction($row['val']).'&lt;/div&gt;';
+     $i++;
+  } else {echo '&lt;div style="margin-bottom:20px;"&gt;' . $row['val'] . '&lt;/div&gt;';}
+}
+if($i == 0){
+   echo '&lt;table&gt;';
+   echo '&lt;tr&gt;&lt;td&gt;Found none!&lt;/td&gt;&lt;/tr&gt;';
+   echo '&lt;/table&gt;';
+}
+            </pre>
+         </div>
+         <div class="col-md-5">
+            <h4>...into this!</h4>
+            <pre class="prettyprint">
+@file newUser.php
+?php
+require_once "php/Decorator.php";
+require_once "data/Connect.php";
+/**
+ * create the page object and populate
+ */
+$page = new DECORATOR('newUser.xhtml');
+$page->css('stylesheets/default');
+$page->js('javascript/PopupMessage');
+$page->title('New User');
+
+// grab newUser data for the template
+$db - new Data();
+$page->newUserArray = db->getNewUsers();
+
+// execute the page
+echo $page->execute();
+            </pre>
+            <pre class="prettyprint">
+@file newUser.xhtml
+&lt;table&gt;
+   &lt;tal:block tal:repeat="user newUserAray"&gt;
+      &lt;tr&gt;
+         &lt;td tal:content="user/name|default"&gt;Found None!&lt;/td&gt;
+         &lt;td tal:content="user/id|nothing"&gt; - &lt;/td&gt;
+         &lt;td tal:content="user/date|nothing"&gt; - &lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/tal:block&gt;
+&lt;/table&gt;
+            </pre>
+         </div>
+      </div>
+   </div>
+</div>

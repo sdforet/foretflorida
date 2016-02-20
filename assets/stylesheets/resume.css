@@ -1,0 +1,21 @@
+/* resmume.php */
+#phpTools img {
+   max-height: 48px;
+}
+.toolLoad:hover {
+   cursor: pointer;
+   border-top: 1px solid #1B809E;
+   border-left: 1px solid #1B809E;
+}
+.education-section img {
+   float: left;
+   margin-right: 10px;
+   opacity: .4;
+}
+.popupMessage .prettyprint {
+   text-align: left;
+}
+.popupMessage .panel-body {
+   text-align: left;
+   font-weight: normal;
+}

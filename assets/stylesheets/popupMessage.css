@@ -2,7 +2,7 @@
    display: none;
    position: absolute;
    width: 100%;
-   height: 150%;
+   height: 250%;
    top: 0px;
    left: 0px;
    background-color: black;
@@ -32,6 +32,8 @@
    padding: 10px;
    font-size: 14px;
    font-weight: bold;
+   max-height: 650px;
+   overflow: auto;
 }
 .popupMessage .msgButton {
    background-image: linear-gradient(to bottom,#337ab7 0,#265a88 100%);

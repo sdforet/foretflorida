@@ -98,11 +98,15 @@ function PopupMessage() {
          $('.popupMessage').center();
       };
 
-      //dismiss the popup and set a cookie
+      //set a cookie, dismiss the popup and destroy the elements
       $('.msgButton').click( function() {
-         $('.popupMessage').fadeToggle('slow');
-         $('.popupShader').fadeToggle('slow');
          setPopupMessageCookie(options.cookieName);
+         $('.popupMessage').fadeToggle('slow');
+         $('.popupShader').fadeToggle('slow', function() {
+            $('.popupMessage').empty().remove();
+            $('.popupShader').empty().remove();
+            options.message = '';
+         });
       });
    }
 
@@ -149,6 +153,39 @@ function PopupMessage() {
 }
 
 /**
+ * helper functions to use ajax to load popup content and initialize
+ */
+function loadRemotePopupContent(popSet) {
+
+   $.ajax({
+      url: popSet.url,
+      success: function(result){
+        popSet.messageHtml = result;
+      }
+   });
+
+   $(document).ajaxComplete(function(){
+      if (!popSet.messageHtml) {
+         popSet.messageHtml = 'There was an error fetching content.';
+      }
+      showPopup(popSet);
+      //clear old data and un-bind this ajaxComplete() so it won't interfere with other Ajax requests later
+      popSet.messageHtml = '';
+      $(document).off('ajaxComplete');
+   });
+}
+
+function showPopup(popSet){
+   var popup = new PopupMessage();
+   popup.init({
+      title: popSet.title,
+      message: popSet.messageHtml,
+      button: popSet.button,
+      customCss: popSet.cssClass
+   });
+}
+
+/**
  * helper function to keep whatever centered in the browser window
  */
 jQuery.fn.center = function () {
@@ -157,16 +194,3 @@ jQuery.fn.center = function () {
    this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
    return this;
 }
-
-//test code
-$(document).ready(function() {
-   popup = new PopupMessage();
-   popup.init({
-      title: 'Heed my Warning',
-      message: 'Testing a new notification system<br />using the custom made plugin "PopupMessage.js"!',
-      button: 'Pop Off',
-      cookie: true,
-      cookieName: 'fflPopupMessage',
-      customCss: 'newClassName'
-   });
-});

@@ -1,11 +1,11 @@
 /**
- * place default styles here
+ * default styles here
  */
 body {
     padding-top: 70px;
     padding-bottom: 30px;
     background-color: #f7f7f7;
-    background-image: url('../images/background.gif');
+    /*background-image: url('../images/background.gif');*/
 }
 html {
    overflow: -moz-scrollbars-vertical;
@@ -16,25 +16,18 @@ html {
     display: block;
     margin-bottom: 20px;
 }
-
 .theme-showcase > p > .btn {
     margin: 5px 0;
 }
-
 .theme-showcase .navbar .container {
     width: auto;
 }
-
 .page-header {
    border-bottom: 2px solid #e9e9e9;
 }
-
-.education-section img {
-   float: left;
-   margin-right: 10px;
-   opacity: .4;
-}
-/* WeekPickerStyles */
+/**
+ * WeekPickerStyles
+ */
 .date-form {
     margin: 10px;
 }
@@ -59,9 +52,9 @@ label.control-label span {
     cursor: no-drop;
     color: #888;
 }
-
-
-/* ZeroClipboard styles */
+/**
+ *  ZeroClipboard styles
+ */
 .zero-clipboard {
     position: relative;
     display: none;

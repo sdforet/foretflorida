@@ -1,0 +1,114 @@
+<div class="container panel panel-default dDesk">
+   <div class="row">
+      <div class="panel-body">
+         <div class="col-md-2">
+            <h1 class="text-center"><img src="assets/images/icons/sf_icn.png" /><br />Symfony</h1>
+         </div>
+         <div class="col-md-10">
+            <p>
+               <a href="http://symfony.com/what-is-symfony">Symfony.com</a> describes itself like this:
+               <i>Symfony is a set of PHP Components, a Web Application framework, a Philosophy, and
+               a Community - all working together in harmony.</i> No doubt this is a large community
+               with support wordwide. I have found Symfony to be very useful with larger scale projects,
+               but too robust on smaller ones. Symfony's greatest asset is the integration of its features,
+               and its greatest weakness; the steep learning curve to get started with the framework.
+               Included below is a portion of "The Form Component" which builds a two element form (a numerical
+               input and a button) Direct Injection, services.yml, TWIG, db Entity, and vaildation.yml, not included.
+               This should give you a good idea about Symfony's learning curve.
+            </p>
+         </div>
+      </div>
+      <div class="panel-body clearfix">
+         <div class="col-md-6">
+            <pre class="prettyprint">
+@file MyNewFormType.php
+
+/**
+ * 1 - Create a form class type in /myBundle/Forms
+ */
+namespace path\to\MyBundle\Form;
+use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+
+class MyNewFormType extends AbstractType
+{
+   public function buildForm(FormBuilderInterface $builder, array $options)
+   {
+       $builder
+           ->add('key', 'text', array(
+               'label' => 'Your ID NUmber: ',
+               'required' => true,
+               'attr' => array(
+                   'pattern' => '[0-9]*',
+                   'inputmode' => 'numeric'
+               )
+           )
+           ->add('continue', 'submit', array(
+               'attr' => array(
+                   'class' => 'btn btn-default'
+               )
+           ))
+       ;
+   }
+   public function getName()
+   {
+       return 'myNewForm';
+   }
+   public function setDefaultOptions(OptionsResolverInterface $resolver)
+   {
+       $resolver->setDefaults([
+            'data_class' => 'Path\To\Doctrine\Entity\MyDataEntity'
+       ]);
+   }
+}
+            </pre>
+         </div>
+         <div class="col-md-6">
+            <pre class="prettyprint">
+@file mySymfonyPage.php
+
+/**
+ * 2 - Place the required use statements in the page controller that will utilize the form
+ */
+use Path\to\MyBundle\Form\MyNewFormType;  //this is the one created in step 1
+use Symfony\Component\HttpFoundation\RequestStack;
+use Symfony\Component\Form\FormFactoryInterface;
+/**
+ * 3 - Create and instanciate a formFactory, requestStack and a {name_of_form} property in the controller
+ */
+protected $mySpecialForm;
+protected $formFactory;
+protected $requestStack;
+public function __construct(
+  FormFactoryInterface $formFactory,
+  RequestStack $requestStack,
+) {
+  $this->formFactory = $formFactory;
+  $this->requestStack = $requestStack;
+}
+public function __invoke()
+{
+  $dbEntity = new MyDataEntity(); // create a db entity
+  $mySpecialForm = $this->formFactory->create(new MyNewFormType(), $dbEntity);
+  $request = $this->requestStack->getCurrentRequest();
+  $mySpecialForm->handleRequest($request);
+  if ($mySpecialForm->isValid())
+  {
+      $appKey = $mySpecialForm['key']->getData();
+      $key = $this->dbEntity->findBy(array('key' => $property));
+      if ($key)
+      {
+          //this part requires RouterInterface and RedirectResponse namespace (not listed above)
+          return new RedirectResponse($this->route->generate('key_to_my_bundle.index', array('key' => $key)));
+      }
+  }
+  return $this->templating->renderResponse('FullNameOfMyBundle:ClassName:myTemplate.html.twig', array(
+      'mySpecialForm' => $mySpecialForm->createView(),
+  ));
+}
+            </pre>
+         </div>
+      </div>
+   </div>
+</div>
