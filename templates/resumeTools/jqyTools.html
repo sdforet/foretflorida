@@ -6,16 +6,92 @@
          </div>
          <div class="col-md-10">
             <p>
-               Some text about the tool being used here and the purpose of this section.
-               Some text about the tool being used here and the purpose of this section.
-               Some text about the tool being used here and the purpose of this section.
-               Some text about the tool being used here and the purpose of this section.
+               jQuery is a JavaScript library which makes it much easier for front-end developers to add functionality
+               to their sites. jQuery has powerful featrues wrapped in functions such as $.ajax or even DOM maniplulation
+               using .css() or .attr() or .html()... the list is quite extensive. In my opinion jQuery is one of the
+               most powerful tools a web developer has. I have included a sample of an object that I created. The 
+               spec required custom hotkeys for an implementation of jPlayer. Using a mix of straight JavaScript and
+               a heavy dose of jQuery, these types of interfaces are a joy to write.
             </p>
          </div>
       </div>
       <div class="panel-body clearfix">
          <pre class="prettyprint">
-            code goes here
+/**
+ * keyboard hot-key object
+ * used to provide functionality to key-down events detected in the document.ready state
+ *
+ * @param object jPlayer instance
+ * @param object playist instance
+ * @param object control instance
+ */
+function Keyboard(instance, playlist, controls) {
+   //property names in keyCheck obj must have a corresponding property name in keyFunctions obj
+   var
+      keyCheck = {
+         play: [32, 80],   // P, p, Space bar
+         mute: [77],       // M, m
+         fullScrn: [70],   // F, f
+         fwdSkip: [39],    // right arrow
+         bckSkip: [37],    // left arrow
+         volUpFive: [38],  // up arrow
+         volDnFive: [40],  // down arrow
+         skipToEnd: [35],  // End button
+         strtAtBeg: [36],  // Home button
+         toggleList: [84, 76]  // T, t and L, l
+      },
+      keyFunctions = {
+         play: function(e) {
+            controls.playback.togglePlayPause();
+         },
+         mute: function(e) {
+            controls.volume.toggleMute();
+         },
+         fullScrn: function(e) {
+            if ($('.jp-restore-screen').css('display') == 'none') {
+               instance.jPlayer({fullScreen: true});
+            }
+            else {
+               instance.jPlayer({fullScreen: false});
+            }
+         },
+         fwdSkip: function(e) {
+            controls.playback.skipNumSeconds('forward', 5);
+         },
+         bckSkip: function(e) {
+            controls.playback.skipNumSeconds('back', 5);
+         },
+         volUpFive: function(e) {
+            e.stopPropagation();
+            controls.volume.moveLevel('up', 5);
+         },
+         volDnFive: function(e) {
+            e.stopPropagation();
+            controls.volume.moveLevel('down', 5);
+         },
+         skipToEnd: function(e) {
+            instance.jPlayer('play', Math.round(instance.data().jPlayer.status.duration - 5))
+         },
+         strtAtBeg: function(e) {
+            instance.jPlayer('play', 0);
+         },
+         toggleList: function(e) {
+            if (hasPlaylist) {
+               playlist.toggleList($('#playlistToggle').attr('data'));
+            }
+         }
+      }
+   ;
+   //call a method from keyFunctions when a key-down event matches a value found in keyCheck[property]
+   this.actionKey = function(e) {
+      for (property in keyCheck) {
+         if (jQuery.inArray(e.keyCode, keyCheck[property]) != -1) {
+            e.preventDefault();
+            keyFunctions[property](e);
+         }
+      }
+   }
+}
          </pre>
       </div>
    </div>
