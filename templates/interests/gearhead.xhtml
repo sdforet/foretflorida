@@ -1,0 +1,48 @@
+<tal:block>
+   <div class="container menuItems">
+      <div class="row">
+         <tal:block metal:use-macro="menu" />
+      </div>
+   </div>
+   <div id="fullpage">
+      <div class="section" data-anchor="current"><tal:block metal:use-macro="current" /></div>
+      <div class="section" data-anchor="future"><tal:block metal:use-macro="future" /></div>
+      <div class="section" data-anchor="dream"><tal:block metal:use-macro="dream" /></div>
+      <div class="section" data-anchor="other"><tal:block metal:use-macro="other" /></div>
+   </div>
+</tal:block>
+<!--
+   macros to support the upper section go here
+ -->
+<tal:block metal:define-macro="menu">
+   <ul id="gearNavigation" class=" nav nav-pills col-md-offset-1" role="tablist">
+      <li role="presentation" data-menuanchor="current" class="active"><a href="#current">Current Ride</a></li>
+      <li role="presentation" data-menuanchor="future"><a href="#future">Future Ride</a></li>
+      <li role="presentation" data-menuanchor="dream"><a href="#dream">Dream Ride</a></li>
+      <li role="presentation" data-menuanchor="other"><a href="#other">Other Contenders</a></li>
+   </ul>
+</tal:block>
+
+<tal:block metal:define-macro="current">
+   <div class="currentSection container">
+      Current Section
+   </div>
+</tal:block>
+
+<tal:block metal:define-macro="future">
+   <div class="futureSection container">
+      Future Section
+   </div>
+</tal:block>
+
+<tal:block metal:define-macro="dream">
+   <div class="dreamSection container">
+      Dream Section
+   </div>
+</tal:block>
+
+<tal:block metal:define-macro="other">
+   <div class="contenderSection container">
+      Contenders Section
+   </div>
+</tal:block>

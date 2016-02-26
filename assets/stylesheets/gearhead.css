@@ -1,0 +1,49 @@
+body {
+   background-image: linear-gradient(to bottom,#222 0,#000 60%);
+}
+.section {
+   color: white;
+}
+.navbar-inverse {
+   border-color: transparent;
+}
+.currentSection, .futureSection, .dreamSection, .contenderSection {
+   height: 600px;
+   border: 2px solid #121212;
+   padding: 10px;
+}
+.futureSection {
+}
+.dreamSection {
+}
+.contenderSection {
+}
+.menuItems {
+   position: relative;
+   width: 1000px;
+   margin: 5px;
+   z-index: 500;
+   top: 50px;
+   text-align: center;
+}
+.menuItems li {
+   list-style: none;
+   display: inline;
+   padding: 0px 15px;
+   position: relative;
+   white-space: nowrap;
+   left: 0;
+}
+.menuItems a {
+   outline: 0;
+}
+.nav-pills li a {
+   border-radius: 0px;
+   color: #aaa;
+}
+.nav > li > a:focus, .nav > li > a:hover {
+   background-color: transparent;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+   background-color: #111;
+}
