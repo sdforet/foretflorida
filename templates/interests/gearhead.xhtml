@@ -1,48 +1,193 @@
 <tal:block>
-   <div class="container menuItems">
-      <div class="row">
-         <tal:block metal:use-macro="menu" />
-      </div>
-   </div>
-   <div id="fullpage">
-      <div class="section" data-anchor="current"><tal:block metal:use-macro="current" /></div>
-      <div class="section" data-anchor="future"><tal:block metal:use-macro="future" /></div>
-      <div class="section" data-anchor="dream"><tal:block metal:use-macro="dream" /></div>
-      <div class="section" data-anchor="other"><tal:block metal:use-macro="other" /></div>
+   <div id="fullpage" class="container theme-showcase" role="main">
+      <div class="section row" ><tal:block metal:use-macro="current" /></div>
+      <div class="section row" ><tal:block metal:use-macro="future" /></div>
+      <div class="section row" ><tal:block metal:use-macro="dream" /></div>
+      <div class="section row" ><tal:block metal:use-macro="other" /></div>
    </div>
 </tal:block>
 <!--
    macros to support the upper section go here
  -->
-<tal:block metal:define-macro="menu">
-   <ul id="gearNavigation" class=" nav nav-pills col-md-offset-1" role="tablist">
-      <li role="presentation" data-menuanchor="current" class="active"><a href="#current">Current Ride</a></li>
-      <li role="presentation" data-menuanchor="future"><a href="#future">Future Ride</a></li>
-      <li role="presentation" data-menuanchor="dream"><a href="#dream">Dream Ride</a></li>
-      <li role="presentation" data-menuanchor="other"><a href="#other">Other Contenders</a></li>
-   </ul>
-</tal:block>
 
+<!--
+
+      <div class="row">
+         <div class="col-md-6">
+            <img src="assets/images/auto/genesis/interior_444_333.jpg" />
+         </div>
+         <div class="col-md-6">
+            <img src="assets/images/auto/genesis/headlamp_500_333.jpg" />
+         </div>
+      </div>
+
+
+ -->
 <tal:block metal:define-macro="current">
-   <div class="currentSection container">
-      Current Section
+   <div class="currentSection">
+      <div class="col-md-12">
+         <p class="statusTag pull-right">Current Ride</p>
+         <h1>2012 Genesis 5.0</h1>
+         <p>
+            After buying my wife a Genesis 3.8 sedan I fell in love with this platform.
+            I was looking for a car which was less than 5 years old, cost less than 30K, and has more than 400 horses.
+            The Genesis 5.0 sedan was the only car that met all of these criteria. I have not been disapointed
+            with my purchase. Since buying the Genesis, I have upgraded the exhaust system by deleting the 2nd cats,
+            upgrading the intermedate pipes to 2.5" true-dual (no-crossover), and tuned the exhaust sound by using
+            28" Thrush glass packs and Modified DynoMax VT's at the rear. I am also, using K&amp;N highflow filters.
+            I estimate about 20 or so extra HP out of this arrangment since my 0-60 times improved from 5.1
+            to 4.6 seconds. That makes my family sedan a 450HP sleeper that can outperform any Mustang GT, Camaro SS,
+            Corvette LS1/2, BMW 550, and Mercedes E350/SL550.
+         </p>
+      </div>
+      <div class="info container">
+         <div class="row">
+            <div class="col-md-4">
+               <h3>Engine Statistics</h3>
+               <ul>
+                  <li>5.0L DOHC 32 valve GDI-V8</li>
+                  <li>429 HP 376 ft-lbs Torque</li>
+                  <li>Rear Wheel Drive</li>
+                  <li>Variable Intake System</li>
+                  <li>11.5:1 Compression</li>
+               </ul>
+            </div>
+            <div class="col-md-4">
+               <h3>Interior Features</h3>
+               <ul>
+                  <li>Lexicon 17 Speaker 7.1 Surround System</li>
+                  <li>Integrated Nav with Back-up Camera</li>
+                  <li>Premium Black Leather</li>
+                  <li>Heated Seats (all)</li>
+                  <li>8 way pwr D-Seat with memory</li>
+               </ul>
+            </div>
+            <div class="col-md-4">
+               <h3>Exterior Features</h3>
+               <ul>
+                  <li>Rear Lip Spoiler</li>
+                  <li>Adaptive Headlights</li>
+                  <li>Smart Cruise Control</li>
+                  <li>Proximity Sensors (360<sup>o</sup>)</li>
+                  <li>Lane Departure Warning</li>
+               </ul>
+            </div>
+
+         </div>
+      </div>
+      <img class="center-block" src="assets/images/auto/genesis/exterior_1080_348.jpg" />
    </div>
 </tal:block>
 
 <tal:block metal:define-macro="future">
-   <div class="futureSection container">
-      Future Section
+   <div class="futureSection">
+      <div class="col-md-12">
+         <p class="statusTag pull-right">Future Ride</p>
+         <h1>2016 Mercedes AMG gt2</h1>
+         <p>
+            Its one thing to have a car that can go fast... its another thing to do it in extreme luxury, while
+            preserving the exileration of a true "driver's" car. Motor Trend named this car it's 2016 Drivers Car of
+            the Year, and I agree it is spectacular. Apart from the high performance and striking goo looks, MT
+            described this car as the greatest true grand tourer. A car that you can not only blast away competition
+            at the track (or red light), but drive comfortably across the country. As an audiophile, the soud of a
+            well tuned powerhouse is almost as imporant as the power is produces, listen to AMG explain the
+            exhaust tuning... "<em>the AMG Dynamic Performance Exhaust can actively bypass its rear muffler,
+            unleashing the... unmistakable symphony of snarling revs, open-throttle cresendos, and crackling
+            deceleration"</em>. I can't wait to get my hands on one of these.
+         </p>
+      </div>
+      <div class="info container">
+         <div class="row">
+            <div class="col-md-4">
+               <h3>Engine Statistics</h3>
+               <ul>
+                  <li>4.0L DOHC 32 valve V8</li>
+                  <li>503 HP 479 ft-lbs Torque</li>
+                  <li>Twin Turbo</li>
+                  <li>Rear-mounted Dual-clutch 7-speed</li>
+                  <li>3.7 seconds 0-60</li>
+               </ul>
+            </div>
+            <div class="col-md-4">
+               <h3>Interior Features</h3>
+               <ul>
+                  <li>AMG Dynamic Select</li>
+                  <li>8.4" Touchpad Command</li>
+                  <li>Nappa Leather</li>
+                  <li>Race Steats</li>
+                  <li>Carbon Fiber Accents</li>
+               </ul>
+            </div>
+            <div class="col-md-4">
+               <h3>Exterior Features</h3>
+               <ul>
+                  <li>Auto-Deploy Rear Spoiler</li>
+                  <li>Staggered wheels</li>
+                  <li>Adaptive Suspension</li>
+                  <li>Smart Cruise Control</li>
+                  <li>Proximity Sensors (360<sup>o</sup>)</li>
+               </ul>
+            </div>
+
+         </div>
+      </div>
+      <img class="center-block" src="assets/images/auto/merc/mercedes-amg_gt2_1080_348.jpg" />
    </div>
 </tal:block>
 
 <tal:block metal:define-macro="dream">
    <div class="dreamSection container">
-      Dream Section
+      <div class="col-md-12">
+         <p class="statusTag pull-right">Dream Ride</p>
+         <h1>2006 Mercedes AMG-McLaren SLR</h1>
+         <p>
+            Lets face it, IF I am ever lucky enough to own the AMG gt2 why not dream of owning its grand-father, the
+            heavy weight champ, AMG-McLaren SLR. This car, in my opinion, is the pinacle of design performance
+            and luxury. Mmmm... (insert dream sequence here...) Supercharged 640 HP V8, need I say more?
+         </p>
+      </div>
    </div>
 </tal:block>
 
 <tal:block metal:define-macro="other">
    <div class="contenderSection container">
-      Contenders Section
+      <div class="col-md-12">
+         <p class="statusTag pull-right">Future Ride Contenders</p>
+      </div>
+      <div class="row">
+         <div class="col-md-4">
+            <h3>2016 Corvette Z06</h3>
+            <p>Statistics</p>
+            <ul>
+               <li>engine</li>
+               <li>hp</li>
+               <li>assist</li>
+               <li>trans</li>
+               <li>perf</li>
+            </ul>
+         </div>
+         <div class="col-md-4">
+            <h3>2016 Jaguar F type</h3>
+            <p>Statistics</p>
+            <ul>
+               <li>engine</li>
+               <li>hp</li>
+               <li>assist</li>
+               <li>trans</li>
+               <li>perf</li>
+            </ul>
+         </div>
+         <div class="col-md-4">
+            <h3>BMW 650 M-series</h3>
+            <p>Statistics</p>
+            <ul>
+               <li>engine</li>
+               <li>hp</li>
+               <li>assist</li>
+               <li>trans</li>
+               <li>perf</li>
+            </ul>
+         </div>
+      </div>
    </div>
 </tal:block>

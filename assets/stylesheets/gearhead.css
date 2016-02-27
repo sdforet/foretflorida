@@ -2,48 +2,61 @@ body {
    background-image: linear-gradient(to bottom,#222 0,#000 60%);
 }
 .section {
-   color: white;
+   color: #bbb;
+   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.section img {
+   max-width: 98%;
+   position: relative;
+   bottom: 10px;
+}
+.section .info {
+   height: 325px;
+}
+#fp-nav ul li a span {
+   background: #099BC2;
 }
 .navbar-inverse {
    border-color: transparent;
 }
+.fullpage {
+}
+.section h1, .section h3 {
+   font-family: 'Gruppo', cursive;
+   margin: 0px;
+   padding: 4px;
+   color: #B79C6F;
+}
+.section p, .section li {
+   font-size: 12px;
+   letter-spacing: 1px;
+   line-heght: 18px;
+   overflow-y: auto
+}
+.statusTag {
+   padding: 3px 10px;
+   background-color: #099BC2;
+   color: black;
+   font-size: 20px;
+   font-weight: bold;
+   margin-top: -10px;
+   margin-right: -25px;
+}
 .currentSection, .futureSection, .dreamSection, .contenderSection {
-   height: 600px;
-   border: 2px solid #121212;
+   height: 700px;
+   background-color: black;
+   border: 2px solid #099BC2;
    padding: 10px;
 }
-.futureSection {
-}
 .dreamSection {
+   background-image: url('../images/auto/merc/slr_1080_591.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+}
+.dreamSection .col-md-4, .dreamSection .col-md-12{
+   background-color: rgba(0, 0, 0, 0.5);
+
 }
 .contenderSection {
-}
-.menuItems {
-   position: relative;
-   width: 1000px;
-   margin: 5px;
-   z-index: 500;
-   top: 50px;
-   text-align: center;
-}
-.menuItems li {
-   list-style: none;
-   display: inline;
-   padding: 0px 15px;
-   position: relative;
-   white-space: nowrap;
-   left: 0;
-}
-.menuItems a {
-   outline: 0;
-}
-.nav-pills li a {
-   border-radius: 0px;
-   color: #aaa;
-}
-.nav > li > a:focus, .nav > li > a:hover {
-   background-color: transparent;
-}
-.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
-   background-color: #111;
 }
