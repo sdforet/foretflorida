@@ -59,4 +59,18 @@ body {
 
 }
 .contenderSection {
+   height: 550px;
+}
+.contenderSection ul {
+   margin: 25px 0px;
+   padding: 0px;
+}
+.contenderSection .col-md-4 {
+   height: 500px;
+}
+.contenderSection img {
+   padding-top:5px;
+   width: 80%;
+   position: absolute;
+   bottom: 0;
 }
