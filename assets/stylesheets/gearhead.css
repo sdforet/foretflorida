@@ -43,34 +43,29 @@ body {
    margin-right: -25px;
 }
 .currentSection, .futureSection, .dreamSection, .contenderSection {
-   height: 700px;
+   min-height: 700px;
    background-color: black;
    border: 2px solid #099BC2;
    padding: 10px;
 }
 .dreamSection {
    background-image: url('../images/auto/merc/slr_1080_591.jpg');
+}
+#future_1 {
+   background-image: url('../images/auto/future/z06.jpg');
+}
+#future_2 {
+   background-image: url('../images/auto/future/f-type.jpg');
+}
+#future_3 {
+   background-image: url('../images/auto/future/m6.jpg');
+}
+.dreamSection, .contenderSection {
    background-repeat: no-repeat;
    background-position: center;
    background-size: cover;
 }
-.dreamSection .col-md-4, .dreamSection .col-md-12{
-   background-color: rgba(0, 0, 0, 0.5);
-
-}
-.contenderSection {
-   height: 550px;
-}
-.contenderSection ul {
-   margin: 25px 0px;
-   padding: 0px;
-}
-.contenderSection .col-md-4 {
-   height: 500px;
-}
-.contenderSection img {
-   padding-top:5px;
-   width: 80%;
-   position: absolute;
-   bottom: 0;
+.dreamSection .col-md-4, .dreamSection .col-md-12,
+.contenderSection .col-md-4, .contenderSection .col-md-12{
+   background-color: rgba(0, 0, 0, 0.8);
 }

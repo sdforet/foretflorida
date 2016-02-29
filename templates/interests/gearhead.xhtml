@@ -134,64 +134,63 @@
       </div>
    </div>
 </tal:block>
-
+<!--
+   this section requires a string from php which matches an styled #id and a tal:macro
+ -->
 <tal:block metal:define-macro="other">
-   <div class="contenderSection container">
+   <div class="contenderSection container" id="${futureTag}">
       <div class="col-md-12">
-         <p class="statusTag pull-right">Future Ride Contenders</p>
-      </div>
-      <div class="row">
-         <div class="col-md-4">
-            <h3>2016 Corvette Z06</h3>
-            <ul>
-               <li>6.2L GDI V8 Supercharged</li>
-               <li>650HP 650 ft-lbs Torque</li>
-               <li>Rear Wheel Drive</li>
-               <li>7sp Manual</li>
-               <li>0-60 3.3sec</li>
-            </ul>
-            <p>
-               This car is a beutiful example of American imagination and engineering mastery. Unfortunately,
-               in order to play in this class you have to opt for the Z06, which is still the lowest priced
-               supercar on the market today. Time will tell if this car has good reliability and holds its value.
-            </p>
-            <img class="" src="assets/images/auto/z06.jpg" />
-         </div>
-         <div class="col-md-4">
-            <h3>2016 Jaguar F type/R</h3>
-            <ul>
-               <li>5.0L GDI V8 Intercooled Supercharged</li>
-               <li>550HP 502 ft-lbs Torque</li>
-               <li>All Wheel Drive</li>
-               <li>8sp Automatic</li>
-               <li>0-60 3.4 sec</li>
-            </ul>
-            <p>
-               This is a nice example of ultra modern meets british class. This car looks right at home sitting
-               next to its cousin, the Aston Martin DB-<i>S</i>. The base model does not meet the performance
-               of this class so I will have to opt for the "R". IT has been reported by Car & Driver that the
-               f-type has a rough ride, and some jittery suspension. At the right price, I think a used f-type R
-               would be a strong contenter, if only based upon the ferocious sound.
-            </p>
-            <img class="" src="assets/images/auto/f-type.jpg" />
-         </div>
-         <div class="col-md-4">
-            <h3>BMW M6</h3>
-            <ul>
-               <li>4.4L GDI V8</li>
-               <li>560HP 500 ft-lbs torque</li>
-               <li>Rear Wheel Drive</li>
-               <li>6sp Autoshift Manual</li>
-               <li>0-60 4.0 sec</li>
-            </ul>
-            <p>
-               BMW M division has long been a top player in the best drivers car market. The M6 is in my opinion the
-               top of their sport offering. The V8 this car is absolutely menacing. Since this Bimmer will lose
-               nearly 50% of its value in the first year alone, its used market only. The M6 is a difficult find,
-               but definitely a contender.
-            </p>
-            <img class="" src="assets/images/auto/m6.jpg" />
-         </div>
+         <p class="statusTag pull-right">Future Ride Contender</p>
+         <tal:block metal:use-macro="${futureTag}" />
       </div>
    </div>
+</tal:block>
+
+<tal:block metal:define-macro="future_1">
+   <h3>2016 Corvette Z06</h3>
+   <ul>
+      <li>6.2L GDI V8 Supercharged</li>
+      <li>650HP 650 ft-lbs Torque</li>
+      <li>Rear Wheel Drive</li>
+      <li>7sp Manual</li>
+      <li>0-60 3.3sec</li>
+   </ul>
+   <p>
+      This car is a beautiful example of American imagination and engineering mastery. Unfortunately,
+      in order to play in this class you have to opt for the Z06, which is still the lowest priced
+      supercar on the market today. Time will tell if this car has good reliability and holds its value.
+   </p>
+</tal:block>
+<tal:block metal:define-macro="future_2">
+   <h3>2016 Jaguar F type/R</h3>
+   <ul>
+      <li>5.0L GDI V8 Intercooled Supercharged</li>
+      <li>550HP 502 ft-lbs Torque</li>
+      <li>All Wheel Drive</li>
+      <li>8sp Automatic</li>
+      <li>0-60 3.4 sec</li>
+   </ul>
+   <p>
+      This is a nice example of ultra modern meets british class. This car looks right at home sitting
+      next to its cousin, the Aston Martin DB-<i>S</i>. The base model does not meet the performance
+      of this class so I will have to opt for the "R". IT has been reported by Car & Driver that the
+      f-type has a rough ride, and some jittery suspension. At the right price, I think a used f-type R
+      would be a strong contenter, if only based upon the ferocious sound.
+   </p>
+</tal:block>
+<tal:block metal:define-macro="future_3">
+   <h3>BMW M6</h3>
+   <ul>
+      <li>4.4L GDI V8</li>
+      <li>560HP 500 ft-lbs torque</li>
+      <li>Rear Wheel Drive</li>
+      <li>6sp Autoshift Manual</li>
+      <li>0-60 4.0 sec</li>
+   </ul>
+   <p>
+      BMW M division has long been a top player in the best drivers car market. The M6 is in my opinion the
+      top of their sport offering. The V8 this car is absolutely menacing. Since this Bimmer will lose
+      nearly 50% of its value in the first year alone, its used market only. The M6 is a difficult find,
+      but definitely a contender.
+   </p>
 </tal:block>
