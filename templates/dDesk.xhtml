@@ -1,373 +1,107 @@
 <tal:block>
-   <div class="container panel panel-default dDesk">
-      <div class="row">
-         <div class="panel-body">
-            <div class="col-md-2">
-               <h1 class="text-center"><img src="assets/images/icons/php_icn.jpg" /><br />PHP</h1>
+   <div class="container dDesk">
+      <h4>
+         Sandbox for testing stuff... this page is always changing and may be broken....
+      </h4>
+      <hr />
+      <div class="panel panel-default">
+         <p id="snippets" data-toggle="collapse" data-target="#codeSnippets">
+            Code Snippets
+            <span class="pull-right">
+               <img src="assets/images/icons/php_icn.jpg" />
+               <img src="assets/images/icons/phptal_icn.png" />
+               <img src="assets/images/icons/sf_icn.png" />
+               <img src="assets/images/icons/twig_icn.png" />
+               <img src="assets/images/icons/js_icn.png" />
+               <img src="assets/images/icons/jquery_icn.jpg" />
+               <img src="assets/images/icons/mysql_icn.png" />
+               <img src="assets/images/icons/git_icn.png" />
+            </span>
+         </p>
+         <div class="clearfix panel-body">
+            <div id="codeSnippets" class="collapse clear-fix">
+               <div class="col-md-6">
+                  <tal:block metal:use-macro="dDeskMacros/codeSnippets.xhtml/phpSection" />
+                  <tal:block metal:use-macro="dDeskMacros/codeSnippets.xhtml/talSection" />
+                  <tal:block metal:use-macro="dDeskMacros/codeSnippets.xhtml/smfSection" />
+                  <tal:block metal:use-macro="dDeskMacros/codeSnippets.xhtml/twgSection" />
+               </div>
+               <div class="col-md-6">
+                  <tal:block metal:use-macro="dDeskMacros/codeSnippets.xhtml/ecmSection" />
+                  <tal:block metal:use-macro="dDeskMacros/codeSnippets.xhtml/jqySection" />
+                  <tal:block metal:use-macro="dDeskMacros/codeSnippets.xhtml/sqlSection" />
+                  <tal:block metal:use-macro="dDeskMacros/codeSnippets.xhtml/gitSection" />
+               </div>
             </div>
-            <div class="col-md-10">
-               <p>
-                  According to <a target="_blank" href="http://www.php.net">PHP.net</a>,<i>"PHP is a popular
-                  general-purpose scripting language that is especially suited to web development. Fast, flexible and
-                  pragmatic, PHP powers everything from your blog to the most popular websites in the world."</i>
-                  I agree, and have enjoyed working in this language. My skills have grown
-                  as I developed many new modules, stand-alone managers, and refactored thousands of php files.
-                  An example of refactoring inline php/html to use a templating class called PHPTAL is shown below.
-               </p>
-            </div>
-         </div>
-         <div class="panel-body clearfix">
-            <pre class="prettyprint">
-               code goes here
-            </pre>
          </div>
       </div>
-   </div>
-   <div class="container panel panel-default dDesk">
-      <div class="row">
+      <div class="panel panel-default">
+         <p>
+            Customizations using
+            <a target="_blank" href="http://eonasdan.github.io/bootstrap-datetimepicker/">
+            eonasdan</a> DTP!
+         </p>
          <div class="panel-body">
-            <div class="col-md-2">
-               <h1 class="text-center"><img src="assets/images/icons/phptal_icn.png" /><br />PHPTAL</h1>
+            <div class="col-md-6">
+               <h5>Minimum Setup</h5>
+               <div class="form-group">
+                  <div class="input-group date" id="datetimepicker1">
+                     <input type="text" class="form-control" />
+                     <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                     </span>
+                  </div>
+               </div>
+               <script type="text/javascript">
+                  $(function () {
+                     $("#datetimepicker1").datetimepicker({
+                        debug: true
+                     });
+                  });
+               </script>
             </div>
-            <div class="col-md-10">
-               <p>
-                  PHPTAL is a templating engine for PHP. It has many benefits such as: separation of logic and
-                  presentation, a robust macro system, no speed loss, fails with helpful warnings for the developer,
-                  and forces production of clean XHTML. These and many other advangates of PHPTAL are listed on the
-                  group's site: <a target="_blank" href="http://www.phptal.org">PHPTAL.org</a>.
-               </p>
-            </div>
-         </div>
-         <div class="panel-body clearfix">
-            <pre class="prettyprint">
-               code goes here
-            </pre>
-         </div>
-      </div>
-   </div>
-   <div class="container panel panel-default dDesk">
-      <div class="row">
-         <div class="panel-body">
-            <div class="col-md-2">
-               <h1 class="text-center"><img src="assets/images/icons/sf_icn.png" /><br />Symfony</h1>
-            </div>
-            <div class="col-md-10">
-               <p>
-                  <a href="http://symfony.com/what-is-symfony">Symfony.com</a> describes itself like this:
-                  <i>Symfony is a set of PHP Components, a Web Application framework, a Philosophy, and
-                  a Community - all working together in harmony.</i> No doubt this is a large community
-                  with support wordwide. I have found Symfony to be very useful with larger scale projects,
-                  but too robust on smaller ones. Symfony's greatest asset is the integration of its features,
-                  and its greatest weakness; the steep learning curve to get started with the framework.
-                  Included below is a portion of "The Form Component" which builds a two element form (a numerical
-                  input and a button) Direct Injection, services.yml, TWIG, db Entity, and vaildation.yml, not included.
-                  This should give you a good idea about Symfony's learning curve.
-               </p>
-            </div>
-         </div>
-         <div class="panel-body clearfix">
-            <pre class="prettyprint">
-               code goes here
-            </pre>
-         </div>
-      </div>
-   </div>
-   <div class="container panel panel-default dDesk">
-      <div class="row">
-         <div class="panel-body">
-            <div class="col-md-2">
-               <h1 class="text-center"><img src="assets/images/icons/twig_icn.png" /><br />TWIG</h1>
-            </div>
-            <div class="col-md-10">
-               <p>
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-               </p>
-            </div>
-         </div>
-         <div class="panel-body clearfix">
-            <pre class="prettyprint">
-               code goes here
-            </pre>
-         </div>
-      </div>
-   </div>
-   <div class="container panel panel-default dDesk">
-      <div class="row">
-         <div class="panel-body">
-            <div class="col-md-2">
-               <h1 class="text-center"><img src="assets/images/icons/js_icn.png" /><br />JavaScript</h1>
-            </div>
-            <div class="col-md-10">
-               <p>
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-               </p>
-            </div>
-         </div>
-         <div class="panel-body clearfix">
-            <pre class="prettyprint">
-               code goes here
-            </pre>
-         </div>
-      </div>
-   </div>
-   <div class="container panel panel-default dDesk">
-      <div class="row">
-         <div class="panel-body">
-            <div class="col-md-2">
-               <h1 class="text-center"><img src="assets/images/icons/jquery_icn.jpg" /><br />jQuery</h1>
-            </div>
-            <div class="col-md-10">
-               <p>
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-               </p>
-            </div>
-         </div>
-         <div class="panel-body clearfix">
-            <pre class="prettyprint">
-               code goes here
-            </pre>
-         </div>
-      </div>
-   </div>
-   <div class="container panel panel-default dDesk">
-      <div class="row">
-         <div class="panel-body">
-            <div class="col-md-2">
-               <h1 class="text-center"><img src="assets/images/icons/mysql_icn.png" /><br />MySql</h1>
-            </div>
-            <div class="col-md-10">
-               <p>
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-               </p>
-            </div>
-         </div>
-         <div class="panel-body clearfix">
-            <pre class="prettyprint">
-               code goes here
-            </pre>
-         </div>
-      </div>
-   </div>
-   <div class="container panel panel-default dDesk">
-      <div class="row">
-         <div class="panel-body">
-            <div class="col-md-2">
-               <h1 class="text-center"><img src="assets/images/icons/doctrine_icn.png" /><br />Doctrine</h1>
-            </div>
-            <div class="col-md-10">
-               <p>
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-               </p>
-            </div>
-         </div>
-         <div class="panel-body clearfix">
-            <pre class="prettyprint">
-               code goes here
-            </pre>
-         </div>
-      </div>
-   </div>
-   <div class="container panel panel-default dDesk">
-      <div class="row">
-         <div class="panel-body">
-            <div class="col-md-2">
-               <h1 class="text-center"><img src="assets/images/icons/git_icn.png" /><br />Git</h1>
-            </div>
-            <div class="col-md-10">
-               <p>
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-               </p>
-            </div>
-         </div>
-         <div class="panel-body clearfix">
-            <pre class="prettyprint">
-               code goes here
-            </pre>
-         </div>
-      </div>
-   </div>
-   <div class="container panel panel-default dDesk">
-      <div class="row">
-         <div class="panel-body">
-            <div class="col-md-2">
-               <h1 class="text-center"><img src="assets/images/icons/bootstrap_icn.png" /><br />Bootstrap</h1>
-            </div>
-            <div class="col-md-10">
-               <p>
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-                  Some text about the tool being used here and the purpose of this section.
-               </p>
-            </div>
-         </div>
-         <div class="panel-body clearfix">
-            <pre class="prettyprint">
-               code goes here
-            </pre>
-         </div>
-      </div>
-   </div>
-
-<!--
-<div class="container theme-showcase" role="main">
-    <div class="jumbotron">
-        <h1>Datetime Picker</h1>
-        <p>
-            Parking lot to test different customizations for
-            <a target="_blanck" href="http://eonasdan.github.io/bootstrap-datetimepicker/">eonasdan</a> DTP!
-        </p>
-    </div>
-    <br />
-    <h3>Minimum Setup</h3>
-        <div class="container">
-            <div class="row">
-                <div class='col-sm-6'>
-                    <div class="form-group">
-                        <div class='input-group date' id='datetimepicker1'>
-                            <input type='text' class="form-control" />
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-calendar"></span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <script type="text/javascript">
-                    $(function () {
-                        $('#datetimepicker1').datetimepicker({
-                            debug: true
-                        });
-                    });
-                </script>
-            </div>
-        </div>
-
-    <br />
-    <h3>Custom Formats</h3>
-        <div class="container">
-            <div class="row">
-                <div class='col-sm-6'>
-                    <div class="form-group">
-                        <div class='input-group date' id='datetimepicker3'>
-                            <input type='text' class="form-control" />
-                            <span class="input-group-addon">
-                                <span class="glyphicon glyphicon-time"></span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-                <script type="text/javascript">
-                    $(function () {
-                        $('#datetimepicker3').datetimepicker({
-                            format: 'LT'
-                        });
-                    });
-                </script>
-            </div>
-        </div>
-
-    <br />
-    <h3>Disabled Dates</h3>
-    <div class="container">
-        <div class="row">
-            <div class='col-sm-6'>
-                <div class="form-group">
-                    <div class='input-group date' id='datetimepicker5'>
-                        <input type='text' class="form-control" />
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar"></span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <script type="text/javascript">
-                $(function () {
-                    $('#datetimepicker5').datetimepicker({
-                        defaultDate: "11/1/2013",
-                        disabledDates: [
-                            moment("12/25/2013"),
-                            new Date(2013, 11 - 1, 21),
-                            "11/22/2013 00:53"
-                        ]
-                    });
-                });
-            </script>
-        </div>
-    </div>
-    <br />
-
-    <h3>Disabled Days of the week</h3>
-        <div class="container">
-            <div class="col-sm-6" style="height:130px;">
-                <div class="form-group">
-                    <div class='input-group date' id='datetimepicker11'>
-                        <input type='text' class="form-control" />
-                        <span class="input-group-addon">
-                            <span class="glyphicon glyphicon-calendar">
-                            </span>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <script type="text/javascript">
-                $(function () {
-                    $('#datetimepicker11').datetimepicker({
+            <div class="col-md-6">
+               <h5>Disabled Days</h5>
+               <div class="form-group">
+                  <div class="input-group date" id="datetimepicker11">
+                     <input type="text" class="form-control" />
+                     <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                     </span>
+                  </div>
+               </div>
+               <script type="text/javascript">
+                  $(function () {
+                     $("#datetimepicker11").datetimepicker({
                         daysOfWeekDisabled: [0, 6]
-                    });
-                });
+                     });
+                  });
+               </script>
+            </div>
+         </div>
+      </div>
+      <div class="panel panel-default">
+         <p>jQuery UI DTP with custom weekpicker</p>
+         <div class="panel-body">
+            <div class="col-md-6">
+               <pre>
+                  srtdate: <span id="startDate">__________</span>
+                  to
+                  enddate: <span id="endDate">__________</span>
+               </pre>
+            </div>
+            <div class="col-md-6">
+               <div class="week-picker"></div>
+            </div>
+            <script type="text/javascript">
+               $(".date-picker").datepicker();
+               $(".date-picker").on("change", function () {
+                  var id = $(this).attr("id");
+                  var val = $("label[for='" + id + "']").text();
+                  $("#msg").text(val + " changed");
+               });
             </script>
-        </div>
-    <br />
-
-    <div class="container theme-showcase" role="main">
-        <div class="jumbotron">
-            <h1>Datetime Picker</h1>
-            <p>
-                Parking lot to test different customizations for jQuery UI DTP!
-            </p>
-        </div>
-    </div>
-
-    <script type="text/javascript">
-        $(".date-picker").datepicker();
-
-        $(".date-picker").on("change", function () {
-            var id = $(this).attr("id");
-            var val = $("label[for='" + id + "']").text();
-            $("#msg").text(val + " changed");
-        });
-    </script>
-
-    <h3>jQuery DTP without bootstrap and week-picker functionality</h3>
-    <p>
-        Selection from:  <span id="startDate">__________</span>   to   <span id="endDate">__________</span>
-    </p>
-    <div class="container">
-        <div class="col-sm-6" style="height:130px;">
-            <div class="week-picker"></div>
-        </div>
-    </div>
-    <br />
-    <br />
-
-</div>
--->
+         </div>
+      </div>
+   </div>
 </tal:block>

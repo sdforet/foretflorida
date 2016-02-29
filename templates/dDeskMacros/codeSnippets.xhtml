@@ -1,0 +1,383 @@
+<!--
+   macros for the snippets
+ -->
+<tal:block metal:define-macro="phpSection">
+   <div class="panel panel-default">
+      <div id="titleSection" data-toggle="collapse" data-target="#phpSection">
+        <h3><img src="assets/images/icons/php_icn.jpg" />PHP Snippets</h3>
+      </div>
+      <div id="phpSection" class="collapse">
+         <div class="panel-group" id="php-acc">
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <a data-toggle="collapse" data-parent="#php-acc" href="#php_coll_1">
+                        Load-Time Helper
+                     </a>
+                  </h4>
+               </div>
+               <div id="php_coll_1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <p>Can be used to grab the load-time for a section of code</p>
+                     <pre class="prettyprint">
+&lt;?php
+//some helpful XDEBUG functions
+var_export();
+echo xdebug_print_function_stack($var);
+//use together to get the load time of the contained code
+$debugStart = number_format(xdebug_time_index(), 5);
+//code to test for time
+$debugFinish = number_format(xdebug_time_index(), 5);
+echo  "LOADTIME = " . number_format(($debugFinish-$debugStart), 5);
+                     </pre>
+                  </div>
+               </div>
+            </div>
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <a data-toggle="collapse" data-parent="#php-acc" href="#php_coll_2">
+                        Minimum for PHPTAL
+                     </a>
+                  </h4>
+               </div>
+               <div id="php_coll_2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <p>Very little is required for a PHPTAL page</p>
+                     <pre class="prettyprint">
+&lt;?php
+require_once "php-lib/Decorator.php";
+
+$page = new DECORATOR('index.xhtml');
+
+echo $page->execute();
+                     </pre>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</tal:block>
+
+<tal:block metal:define-macro="talSection">
+   <div class="panel panel-default">
+      <div id="titleSection" data-toggle="collapse" data-target="#talSection">
+        <h3><img src="assets/images/icons/phptal_icn.png" /> PHPTAL Template Pages</h3>
+      </div>
+      <div id="talSection" class="collapse">
+         <div class="panel-group" id="tal-acc">
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <a data-toggle="collapse" data-parent="#tal-acc" href="#tal_coll_1">
+                        Snippet 1
+                     </a>
+                  </h4>
+               </div>
+               <div id="tal_coll_1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <p>Explanation 1</p>
+                     <pre class="prettyprint">
+code
+                     </pre>
+                  </div>
+               </div>
+            </div>
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <a data-toggle="collapse" data-parent="#tal-acc" href="#tal_coll_2">
+                        Snippet 2
+                     </a>
+                  </h4>
+               </div>
+               <div id="tal_coll_2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <p>Explanation 2</p>
+                     <pre class="prettyprint">
+code
+                     </pre>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</tal:block>
+
+<tal:block metal:define-macro="smfSection">
+   <div class="panel panel-default">
+      <div id="titleSection" data-toggle="collapse" data-target="#smfSection">
+        <h3><img src="assets/images/icons/sf_icn.png" /> Symfony Frameworks</h3>
+      </div>
+      <div id="smfSection" class="collapse">
+         <div class="panel-group" id="smf-acc">
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <a data-toggle="collapse" data-parent="#smf-acc" href="#smf_coll_1">
+                        Snippet 1
+                     </a>
+                  </h4>
+               </div>
+               <div id="smf_coll_1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <p>Explanation 1</p>
+                     <pre class="prettyprint">
+code
+                     </pre>
+                  </div>
+               </div>
+            </div>
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <a data-toggle="collapse" data-parent="#smf-acc" href="#smf_coll_2">
+                        Snippet 2
+                     </a>
+                  </h4>
+               </div>
+               <div id="smf_coll_2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <p>Explanation 2</p>
+                     <pre class="prettyprint">
+code
+                     </pre>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</tal:block>
+
+<tal:block metal:define-macro="twgSection">
+   <div class="panel panel-default">
+      <div id="titleSection" data-toggle="collapse" data-target="#twgSection">
+        <h3><img src="assets/images/icons/twig_icn.png" /> Twig Templates</h3>
+      </div>
+      <div id="twgSection" class="collapse">
+         <div class="panel-group" id="twg-acc">
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <a data-toggle="collapse" data-parent="#twg-acc" href="#twg_coll_1">
+                        Snippet 1
+                     </a>
+                  </h4>
+               </div>
+               <div id="twg_coll_1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <p>Explanation 1</p>
+                     <pre class="prettyprint">
+code
+                     </pre>
+                  </div>
+               </div>
+            </div>
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <a data-toggle="collapse" data-parent="#twg-acc" href="#twg_coll_2">
+                        Snippet 2
+                     </a>
+                  </h4>
+               </div>
+               <div id="twg_coll_2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <p>Explanation 2</p>
+                     <pre class="prettyprint">
+code
+                     </pre>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</tal:block>
+
+<tal:block metal:define-macro="ecmSection">
+   <div class="panel panel-default">
+      <div id="titleSection" data-toggle="collapse" data-target="#ecmSection">
+        <h3><img src="assets/images/icons/js_icn.png" /> JavaScript</h3>
+      </div>
+      <div id="ecmSection" class="collapse">
+         <div class="panel-group" id="ecm-acc">
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <a data-toggle="collapse" data-parent="#ecm-acc" href="#ecm_coll_1">
+                        Snippet 1
+                     </a>
+                  </h4>
+               </div>
+               <div id="ecm_coll_1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <p>Explanation 1</p>
+                     <pre class="prettyprint">
+code
+                     </pre>
+                  </div>
+               </div>
+            </div>
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <a data-toggle="collapse" data-parent="#ecm-acc" href="#ecm_coll_2">
+                        Snippet 2
+                     </a>
+                  </h4>
+               </div>
+               <div id="ecm_coll_2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <p>Explanation 2</p>
+                     <pre class="prettyprint">
+code
+                     </pre>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</tal:block>
+
+<tal:block metal:define-macro="jqySection">
+   <div class="panel panel-default">
+      <div id="titleSection" data-toggle="collapse" data-target="#jqySection">
+        <h3><img src="assets/images/icons/jquery_icn.jpg" /> jQuery</h3>
+      </div>
+      <div id="jqySection" class="collapse">
+         <div class="panel-group" id="jqy-acc">
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <a data-toggle="collapse" data-parent="#jqy-acc" href="#jqy_coll_1">
+                        Snippet 1
+                     </a>
+                  </h4>
+               </div>
+               <div id="jqy_coll_1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <p>Explanation 1</p>
+                     <pre class="prettyprint">
+code
+                     </pre>
+                  </div>
+               </div>
+            </div>
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <a data-toggle="collapse" data-parent="#jqy-acc" href="#jqy_coll_2">
+                        Snippet 2
+                     </a>
+                  </h4>
+               </div>
+               <div id="jqy_coll_2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <p>Explanation 2</p>
+                     <pre class="prettyprint">
+code
+                     </pre>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</tal:block>
+
+<tal:block metal:define-macro="sqlSection">
+   <div class="panel panel-default">
+      <div id="titleSection" data-toggle="collapse" data-target="#sqlSection">
+        <h3><img src="assets/images/icons/mysql_icn.png" /> MySql</h3>
+      </div>
+      <div id="sqlSection" class="collapse">
+         <div class="panel-group" id="sql-acc">
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <a data-toggle="collapse" data-parent="#sql-acc" href="#sql_coll_1">
+                        Snippet 1
+                     </a>
+                  </h4>
+               </div>
+               <div id="sql_coll_1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <p>Explanation 1</p>
+                     <pre class="prettyprint">
+code
+                     </pre>
+                  </div>
+               </div>
+            </div>
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <a data-toggle="collapse" data-parent="#sql-acc" href="#sql_coll_2">
+                        Snippet 2
+                     </a>
+                  </h4>
+               </div>
+               <div id="sql_coll_2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <p>Explanation 2</p>
+                     <pre class="prettyprint">
+code
+                     </pre>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</tal:block>
+
+<tal:block metal:define-macro="gitSection">
+   <div class="panel panel-default">
+      <div id="titleSection" data-toggle="collapse" data-target="#gitSection">
+        <h3><img src="assets/images/icons/git_icn.png" /> Git</h3>
+      </div>
+      <div id="gitSection" class="collapse">
+         <div class="panel-group" id="git-acc">
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <a data-toggle="collapse" data-parent="#git-acc" href="#git_coll_1">
+                        Snippet 1
+                     </a>
+                  </h4>
+               </div>
+               <div id="git_coll_1" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <p>Explanation 1</p>
+                     <pre class="prettyprint">
+code
+                     </pre>
+                  </div>
+               </div>
+            </div>
+            <div class="panel panel-default">
+               <div class="panel-heading">
+                  <h4 class="panel-title">
+                     <a data-toggle="collapse" data-parent="#git-acc" href="#git_coll_2">
+                        Snippet 2
+                     </a>
+                  </h4>
+               </div>
+               <div id="git_coll_2" class="panel-collapse collapse">
+                  <div class="panel-body">
+                     <p>Explanation 2</p>
+                     <pre class="prettyprint">
+code
+                     </pre>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</tal:block>

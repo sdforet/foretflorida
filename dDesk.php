@@ -13,6 +13,7 @@ $page->js(
     'javascript/jquery-ui.min',
     'javascript/jquery.cookie',
     'bootstrap-datetimepicker/js/bootstrap-datetimepicker.min',
+    'javascript/weekpicker',
     'javascript/PopupMessage'
 );
 $page->title('Developer Desk');

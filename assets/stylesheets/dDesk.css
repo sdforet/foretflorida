@@ -1,11 +1,33 @@
 /* dDesk.php */
-.dDesk .col-md-2 > h1:nth-child(1) {
+.dDesk > .panel {
+   padding: 10px;
+}
+.dDesk * {
+   border-radius: 0px !important;
+}
+.dDesk #snippets img {
+   max-height: 20px;
+   margin-top: -3px;
+}
+.dDesk .panel-body {
    padding: 0px;
-   margin: 0px;
-   font-size: 25px;
 }
 .dDesk pre.prettyprint {
    margin: 3px;
    border: 1px solid #ccc;
    background-color: #F9F9F9;
+}
+.dDesk .panel h4:hover, .dDesk .panel h3:hover {
+   cursor: pointer;
+}
+
+#titleSection {
+   text-align: center;
+}
+#titleSection img {
+   max-height: 30px;
+   margin-top: -3px;
+}
+#titleSection h3 {
+   font-size: 22px;
 }
