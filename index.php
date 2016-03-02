@@ -8,7 +8,7 @@
       $uri = 'http://';
    }
    $uri .= $_SERVER['HTTP_HOST'];
-   header('Location: '.$uri.'/foretflorida/resume.php');
+   header('Location: '.$uri.'/resume.php');
    exit;
 /**
  * require_once "php-lib/Decorator.php";
