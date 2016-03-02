@@ -3,13 +3,26 @@
  */
 body {
     padding-top: 70px;
-    padding-bottom: 30px;
+    padding-bottom: 60px;
     background-color: #f7f7f7;
-    /*background-image: url('../images/background.gif');*/
 }
 html {
    overflow: -moz-scrollbars-vertical;
    overflow-y: scroll;
+}
+.navbar-inverse {
+   background-image: none;
+   background-color: #191919;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+   color: #191919;
+   background-image: none;
+   background-color: #FFF056;
+}
+.navbar-inverse {
+   border-color: #FFF056;
 }
 .theme-dropdown .dropdown-menu {
     position: static;
@@ -24,6 +37,19 @@ html {
 }
 .page-header {
    border-bottom: 2px solid #e9e9e9;
+}
+#footer {
+   width: 100%;
+   bottom: 0px;
+   position: fixed;
+   z-index: 2000;
+   background-color: #191919;
+   color: white;
+   border-top: 1px solid #FFF056;
+}
+#footer .container {
+   width: 80%;
+   margin: 0px auto;
 }
 /**
  * WeekPickerStyles
@@ -78,7 +104,6 @@ label.control-label span {
     background-color: #563d7c;
     border-color: #563d7c;
 }
-
 @media (min-width: 768px) {
     .zero-clipboard {
         display: block;

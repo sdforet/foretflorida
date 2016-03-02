@@ -9,7 +9,7 @@
             ><meta tal:attributes="name tag/name; content tag/content" />
         </tal:block>
         <!-- goggle fonts -->
-<link href='https://fonts.googleapis.com/css?family=Gruppo|Abel' rel='stylesheet' type='text/css' />
+         <link href='https://fonts.googleapis.com/css?family=Gruppo|Abel' rel='stylesheet' type='text/css' />
         <!-- stylesheets -->
         <link rel="stylesheet" href="assets/bootstrap-3.3.6-dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="assets/bootstrap-3.3.6-dist/css/bootstrap-theme.min.css" />
@@ -24,61 +24,77 @@
             ><script type="text/javascript" tal:attributes="src file"></script>
         </tal:block>
         <title tal:condition="exists:title" tal:content="title" />
-
     </head>
     <body role="document">
-
-        <!-- Fixed navbar -->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href="index.php" class="navbar-brand">Foret Florida</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li tal:condition="true:resHL" class="active"><a href="resume.php">Digital Resume</a></li>
-                        <li tal:condition="not:resHL"><a href="resume.php">Digital Resume</a></li>
-                        <li tal:condition="true:dskHL" class="active"><a href="dDesk.php">Developer's Desk</a></li>
-                        <li tal:condition="not:dskHL"><a href="dDesk.php">Developer's Desk</a></li>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                            aria-haspopup="true" aria-expanded="false">
-                                Interests
-                            <span class="caret"></span></a>
-                          <ul class="dropdown-menu">
-                            <li><a href="#">Audiophile</a></li>
-                            <li><a href="gearhead.php">Gear Head</a></li>
-                            <li><a href="#">Movies</a></li>
-                          </ul>
-                        </li>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-                            aria-haspopup="true" aria-expanded="false">
-                                Archive Sites
-                            <span class="caret"></span></a>
-                          <ul class="dropdown-menu">
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">2011 Early Sites</li>
-                            <li><a href="archive/eliteaudio">Elite Audio</a></li>
-                            <li><a href="archive/gambits/index.html">Gambits</a></li>
-                            <li role="separator" class="divider"></li>
-                            <li class="dropdown-header">2012 Digital Portfolio</li>
-                            <li><a href="archive/2012portfolio">My Site</a></li>
-                          </ul>
-                        </li>
-                    </ul>
-                </div><!--/.nav-collapse -->
+      <div class="container">
+         <div class="row">
+           <!-- Fixed navbar -->
+           <nav class="navbar navbar-inverse navbar-fixed-top">
+               <div class="container">
+                   <div class="navbar-header">
+                       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                           data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                           <span class="sr-only">Toggle navigation</span>
+                           <span class="icon-bar"></span>
+                           <span class="icon-bar"></span>
+                           <span class="icon-bar"></span>
+                       </button>
+                       <a href="index.php" class="navbar-brand">Foret Florida</a>
+                   </div>
+                   <div id="navbar" class="navbar-collapse collapse">
+                       <ul class="nav navbar-nav">
+                           <li tal:condition="true:resHL" class="active"><a href="resume.php">Digital Resume</a></li>
+                           <li tal:condition="not:resHL"><a href="resume.php">Digital Resume</a></li>
+                           <li tal:condition="true:dskHL" class="active"><a href="dDesk.php">Developer's Desk</a></li>
+                           <li tal:condition="not:dskHL"><a href="dDesk.php">Developer's Desk</a></li>
+                           <li class="dropdown">
+                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">
+                                   Interests
+                               <span class="caret"></span></a>
+                             <ul class="dropdown-menu">
+                               <li><a href="#">Audiophile</a></li>
+                               <li><a href="gearhead.php">Gear Head</a></li>
+                               <li><a href="#">Movies</a></li>
+                             </ul>
+                           </li>
+                           <li class="dropdown">
+                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">
+                                   Archive Sites
+                               <span class="caret"></span></a>
+                             <ul class="dropdown-menu">
+                               <li role="separator" class="divider"></li>
+                               <li class="dropdown-header">2011 Early Sites</li>
+                               <li><a href="archive/eliteaudio" target="_blank">Elite Audio</a></li>
+                               <li><a href="archive/gambits/index.html" target="_blank">Gambits</a></li>
+                               <li role="separator" class="divider"></li>
+                               <li class="dropdown-header">2012 Digital Portfolio</li>
+                               <li><a href="archive/2012portfolio" target="_blank">My Site</a></li>
+                             </ul>
+                           </li>
+                       </ul>
+                   </div><!--/.nav-collapse -->
+               </div>
+           </nav>
+         </div>
+         <div class="row">
+            <!-- PHPTAL inserts subtemplate content below this point -->
+            <tal:block tal:content="structure body" />
+         </div>
+      </div>
+      <div id="footer">
+         <div class="container">
+            <div class="col-md-4 text-left">
+               <p>left footer text</p>
             </div>
-        </nav>
-
-        <!-- PHPTAL inserts subtemplate content below this point -->
-        <tal:block tal:content="structure body" />
+            <div class="col-md-4 text-left">
+               <p>center footer text</p>
+            </div>
+            <div class="col-md-4 text-left">
+               <p>right footer text</p>
+            </div>
+         </div>
+      </div>
     </body>
 </html>

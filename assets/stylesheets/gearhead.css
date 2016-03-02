@@ -16,10 +16,8 @@ body {
 #fp-nav ul li a span {
    background: #099BC2;
 }
-.navbar-inverse {
-   border-color: transparent;
-}
-.fullpage {
+.navbar-inverse, #footer {
+   border-color: #099BC2;
 }
 .section h1, .section h3 {
    font-family: 'Gruppo', cursive;
