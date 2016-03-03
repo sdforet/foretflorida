@@ -16,6 +16,7 @@ $page->js(
    'javascript/gearhead'
 );
 $page->title('Gear Head');
+$page->setVarVal('intHL', true);
 
 $number = rand(1,3);
 $page->futureTag = 'future_' . $number;

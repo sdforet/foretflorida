@@ -1,5 +1,8 @@
 body {
    background-image: linear-gradient(to bottom,#222 0,#000 60%);
+   background-image:url('../images/auto/bkgrd_strip.jpg');
+   background-repeat: repeat-x;
+   background-size: contain;
 }
 .section {
    color: #bbb;
@@ -15,6 +18,17 @@ body {
 }
 #fp-nav ul li a span {
    background: #099BC2;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+   color: white;
+   background-image: none;
+   background-color: #099BC2;
+}
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > li > a:hover {
+   color: #099BC2;
 }
 .navbar-inverse, #footer {
    border-color: #099BC2;
@@ -34,7 +48,7 @@ body {
 .statusTag {
    padding: 3px 10px;
    background-color: #099BC2;
-   color: black;
+   color: white;
    font-size: 20px;
    font-weight: bold;
    margin-top: -10px;

@@ -9,6 +9,7 @@ class DECORATOR extends DECTAL
 {
     protected $dskHL = false;
     protected $resHL = false;
+    protected $intHL = false;
 
     public function __construct($template = NULL)
     {
