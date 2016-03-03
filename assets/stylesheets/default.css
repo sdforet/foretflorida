@@ -10,6 +10,9 @@ body {
     padding-bottom: 60px;
     background-color: #f7f7f7;
 }
+h1 {
+   font-size: 28px;
+}
 .navbar-inverse {
    background-image: none;
    background-color: #191919;
