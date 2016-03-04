@@ -4,6 +4,7 @@ html {
    overflow: -moz-scrollbars-vertical;
    overflow-y: scroll;
 }
+ *
  */
 body {
     padding-top: 70px;
