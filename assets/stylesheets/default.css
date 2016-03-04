@@ -13,6 +13,10 @@ body {
 h1 {
    font-size: 28px;
 }
+.navbar-brand img {
+   max-height: 50px;
+   margin-top: -15px;
+}
 .navbar-inverse {
    background-image: none;
    background-color: #191919;
