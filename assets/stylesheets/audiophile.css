@@ -1,0 +1,39 @@
+body {
+   background-color: white;
+}
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:focus,
+.navbar-inverse .navbar-nav > .active > a:hover {
+   color: white;
+   background-image: none;
+   background-color: #990000;
+}
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-nav > li > a:hover {
+   color: #990000;
+}
+.navbar-inverse, #footer {
+   border-color: #990000;
+}
+.content-one {
+
+}
+img.center-speaker {
+   width: 280px;
+}
+img.surround-speaker {
+   width: 280px;
+}
+img.sub-bottom {
+   width:420px;
+   float: left;
+}
+img.sub-back {
+   width: 420px
+}
+img.pioneer-rcvr {
+   width: 300px;
+}
+img.oppo-blu {
+   width: 300px;
+}
