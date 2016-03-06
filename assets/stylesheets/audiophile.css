@@ -1,5 +1,6 @@
 body {
    background-color: white;
+   font-family: 'Josefin Sans', sans-serif;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:focus,
@@ -15,8 +16,14 @@ body {
 .navbar-inverse, #footer {
    border-color: #990000;
 }
-.content-one {
-
+.content-one h1 {
+   font-size: 72px;
+}
+.content-one p {
+   font-size: 36px;
+}
+.content-one span {
+   font-size: 28px;
 }
 img.center-speaker {
    width: 280px;
