@@ -19,3 +19,8 @@
    text-align: left;
    font-weight: normal;
 }
+.toolHelp {
+   text-align: right;
+   margin-top: -15px;
+   padding-bottom: 15px;
+}
