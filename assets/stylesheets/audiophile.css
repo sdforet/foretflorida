@@ -16,14 +16,17 @@ body {
 .navbar-inverse, #footer {
    border-color: #990000;
 }
+.content-one {
+   padding: 0px 20px;
+}
 .content-one h1 {
    font-size: 72px;
 }
 .content-one p {
-   font-size: 36px;
+   font-size: 32px;
 }
 .content-one span {
-   font-size: 28px;
+   font-size: 26px;
 }
 img.center-speaker {
    width: 280px;

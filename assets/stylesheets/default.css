@@ -7,9 +7,10 @@ html {
  *
  */
 body {
-    padding-top: 70px;
-    padding-bottom: 60px;
-    background-color: #f7f7f7;
+   padding-top: 70px;
+   padding-bottom: 60px;
+   background-color: #f7f7f7;
+   font-family: 'Josefin Sans', sans-serif;
 }
 h1 {
    font-size: 28px;
