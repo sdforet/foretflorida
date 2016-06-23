@@ -11,6 +11,7 @@ body {
    padding-bottom: 60px;
    background-color: #f7f7f7;
    font-family: 'Josefin Sans', sans-serif;
+   overflow-y: scroll;
 }
 h1 {
    font-size: 28px;

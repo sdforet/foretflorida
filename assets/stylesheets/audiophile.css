@@ -13,6 +13,9 @@ body {
 .navbar-inverse .navbar-nav > li > a:hover {
    color: #990000;
 }
+img {
+   max-width: 100%;
+}
 .navbar-inverse, #footer {
    border-color: #990000;
 }
@@ -28,15 +31,14 @@ body {
 .content-one span {
    font-size: 26px;
 }
+.content-two span {
+   font-size: 18px;
+}
 img.center-speaker {
    width: 280px;
 }
 img.surround-speaker {
    width: 280px;
-}
-img.sub-bottom {
-   width:420px;
-   float: left;
 }
 img.sub-back {
    width: 420px
@@ -46,4 +48,13 @@ img.pioneer-rcvr {
 }
 img.oppo-blu {
    width: 300px;
+}
+.sub-left, .sub-right {
+   margin-top: 40px;
+}
+.pioneer-rcvr, .oppo-blu, .svs-ultra-bk, .emotiva {
+   margin-right: 25px;
+}
+.svs-ultra-bk, .emotiva {
+   max-width: 120px;
 }
