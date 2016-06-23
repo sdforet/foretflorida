@@ -67,8 +67,8 @@ $page->js('javascript/PopupMessage');
 $page->title('New User');
 
 // grab newUser data for the template
-$db - new Data();
-$page->newUserArray = db->getNewUsers();
+$db = new Data();
+$page->newUserArray = $db->getNewUsers();
 
 // execute the page
 echo $page->execute();
