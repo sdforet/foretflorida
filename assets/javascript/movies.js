@@ -3,8 +3,11 @@
 
     function init()
     {
+        $( ".search-form" ).submit(function( event ) {
+              event.preventDefault();
+              searchMovie();
+        });
 
-        $("#searchMovie").click(searchMovie);
         var movieTitle = $("#movieTitle"),
             tbody = $("#results"),
             searchResults = $("#searchResults"),
@@ -15,10 +18,11 @@
             imgeBsBg = "http://image.tmdb.org/t/p/w500//",
             notFound = "assets/images/not_found.jpg";
 
-//http://api.themoviedb.org/3/movie/11309?api_key=99f82ddbb50c77b2a2e5d9301580b46f
         function searchMovie()
         {
+            searchResults.hide('fast');
             var title = movieTitle.val();
+            movieTitle.val('');
 
             $.ajax({
                 url: srchBase+"?query="+title+"&api_key="+apiKey,
@@ -42,10 +46,10 @@
                         "src": image,
                         "data": m
                     });
-                    searchResults.append(tdiv);
-                    searchResults.show("slow");
+                    searchResults.append(tdiv).show("slow");
                 }
-/*
+
+                /* this is a table format for results
                 var movie = movies.results[m],
                     tr = template.clone(),
                     title = movie.title,
@@ -64,7 +68,7 @@
                         tr.find(".release").html(release);
                         tbody.append(tr);
                     }
-*/
+                    */
             }
             setPopupInformation(movies);
         }
@@ -85,20 +89,16 @@
 
                 function setMoviePopupTemplate(html)
                 {
-                    //var template = $(html);
-                    //console.log(template);
-                    var template = $("<div>");
+                    var template = $("<div>"),
+                        image = (movie.poster_path != null) ? imgeBsBg+movie.poster_path : notFound,
+                        message = new PopupMessage();
+
                     template.html(html);
                     template.find("#mTitle").html(movie.title);
                     template.find("#mPlot").html(movie.overview);
-                    var image = (movie.poster_path != null) ? imgeBsBg+movie.poster_path : notFound;
                     template.find("#mImage").attr("src", image);
                     template.find("#mRelease").html(movie.release_date);
 
-                    //console.log(template);
-                    //alert(template.find("#mPlot").html());
-
-                    var message = new PopupMessage();
                     message.init({
                         title: 'TMDB - The Movie Database',
                         message: template.html(),
@@ -108,7 +108,12 @@
                 }
             });
         }
+
+        /* isotope grid */
+        $('.grid').isotope({
+            itemSelector: '.grid-item',
+            layoutMode: 'packery',
+            percentPosition: true
+        });
     }
 })();
-
-  //Sample usage within your js page's document.ready()

@@ -6,12 +6,24 @@
     display: inline;
 }
 #template img {
-    margin: 5px;
+    margin: 3px;
     width: 185px;
     height: 278px;
 }
+/* clear fix rules */
+#searchResults::before, #searchResults::after {
+    content:"";
+    display:table;
+}
+#searchResults::after {
+    clear:both;
+}
 #searchResults {
+    padding-left: 45px;
+    background-color: #081c24;
     display: none;
+    clear: both;
+    border-bottom: 1px solid #dedede;
 }
 /* popup */
 .moviePopup {
@@ -35,4 +47,24 @@
 #mImage {
 }
 #mRelease {
+}
+
+/* isotope grid */
+.grid {
+    width: 80%;
+    margin: 0px auto;
+}
+.grid-item {
+    width: 185px;
+    height: 278px;
+    background: #e6e5e4;
+    border: 1px solid black;
+}
+
+.grid-item--width2 {
+    width: 92px;
+    height: 137px;
+}
+.clear-both {
+    clear: both;
 }

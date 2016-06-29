@@ -1,15 +1,43 @@
 <tal:block>
 <div class="container">
-    <p class="postertest">Search TMDB (The Movie Database)</p>
-    <input type="text" id="movieTitle" class="form-control" placeholder="Movie Title" />
-    <button id="searchMovie" class="btn btn-primary btn-block">Search</button>
-<!--
+    <section class="search">
+        <div class="search-box">
+            <form class="search-form" autocomplete="off">
+                <span class="glyphicon glyphicon-search xl"></span>
+                <input id="movieTitle" type="text" tabindex="2" autocomplete="off" placeholder="Search for a Movie Title..." />
+            </form>
+        </div>
+    </section>
     <div id="searchResults">
         <div id="template" class="pull-left">
             <img class="poster" src="" data="" />
         </div>
     </div>
- -->
+
+    <hr />
+
+    <div id="" class="grid">
+        <div class="grid-item">
+            <p>Test div1</p>
+        </div>
+        <div class="grid-item grid-item--width2">
+            <p>Test div2</p>
+        </div>
+        <div class="grid-item">
+            <p>Test div1</p>
+        </div>
+        <div class="grid-item">
+            <p>Test div1</p>
+        </div>
+        <div class="grid-item grid-item--width2">
+            <p>Test div2</p>
+        </div>
+        <div class="grid-item grid-item--width2">
+            <p>Test div2</p>
+        </div>
+    </div>
+
+<!--
     <div id="searchResults" class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -19,7 +47,6 @@
             </div>
         </div>
     </div>
-<!--
     <table class="table table-striped" id="movieSearch">
         <thead>
             <tr>

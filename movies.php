@@ -12,6 +12,7 @@ $page->js(
    'javascript/jquery.slimscroll',
    'javascript/date',
    'javascript/PopupMessage',
+   'javascript/isotope-docs.min',
    'javascript/movies'
 );
 $page->title('Movies');
