@@ -1,3 +1,44 @@
 <tal:block>
-testing
+<div class="container">
+    <p class="postertest">Search TMDB (The Movie Database)</p>
+    <input type="text" id="movieTitle" class="form-control" placeholder="Movie Title" />
+    <button id="searchMovie" class="btn btn-primary btn-block">Search</button>
+<!--
+    <div id="searchResults">
+        <div id="template" class="pull-left">
+            <img class="poster" src="" data="" />
+        </div>
+    </div>
+ -->
+    <div id="searchResults" class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div id="template">
+                    <img class="poster" src="" data="" />
+                </div>
+            </div>
+        </div>
+    </div>
+<!--
+    <table class="table table-striped" id="movieSearch">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Plot</th>
+                <th>Poster</th>
+                <th>Release Date</th>
+            </tr>
+        </thead>
+        <tbody id="results">
+            <tr id="template">
+                <td class="title">Movie Title</td>
+                <td class="plot">Plot synopsis</td>
+                <td><img data="" class="poster" src="" /></td>
+                <td class="release">Realese date</td>
+            </tr>
+        </tbody>
+    </table>
+ -->
+</div>
+
 </tal:block>
