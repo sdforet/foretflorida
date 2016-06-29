@@ -1,0 +1,38 @@
+.poster:hover {
+    cursor: pointer;
+}
+#template {
+    text-align: center;
+    display: inline;
+}
+#template img {
+    margin: 5px;
+    width: 185px;
+    height: 278px;
+}
+#searchResults {
+    display: none;
+}
+/* popup */
+.moviePopup {
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: normal;
+}
+.movieInfo {
+    max-width: 90%;
+    min-width: 400px;
+}
+.movieInfo .row {
+    text-align: left;
+    font-size: 1.2em;
+}
+
+.movieInfo img {
+    max-width: 99%;
+}
+#mPlot {
+}
+#mImage {
+}
+#mRelease {
+}
