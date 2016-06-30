@@ -4,12 +4,11 @@
     function init()
     {
         $( ".search-form" ).submit(function( event ) {
-              event.preventDefault();
-              searchMovie();
+            event.preventDefault();
+            searchMovie();
         });
 
         var movieTitle = $("#movieTitle"),
-            tbody = $("#results"),
             searchResults = $("#searchResults"),
             template = $("#template").clone(),
             apiKey = "99f82ddbb50c77b2a2e5d9301580b46f",
@@ -20,62 +19,55 @@
 
         function searchMovie()
         {
-            searchResults.hide('fast');
+            $(".search-results").hide('fast');
+            $(".not-found").hide('fast');
             var title = movieTitle.val();
             movieTitle.val('');
-
-            $.ajax({
-                url: srchBase+"?query="+title+"&api_key="+apiKey,
-                success: renderMoviesWithTemplate
-            })
+            if (title != '') {
+                $.ajax({
+                    url: srchBase+"?query="+title+"&api_key="+apiKey,
+                    success: renderMoviesWithTemplate
+                });
+            } else {
+                $("#bodyRow").animate({"margin-top": "40px"});
+            }
         }
 
         function renderMoviesWithTemplate(movies)
         {
-            console.log(movies.results);
+            //console.log(movies.results);
             searchResults.empty();
+            if ($.isEmptyObject(movies.results)) {
+                $(".not-found").show("slow",function() {
+                    $("#bodyRow").animate({"margin-top": "75px"});
+                });
+            } else {
+                for (var m in movies.results) {
+                    var movie = movies.results[m],
+                        tplt = template.clone(),
+                        title = movie.title,
+                        poster = movie.poster_path,
+                        image = (poster != null) ? imgeBase+poster : notFound;
 
-            for (var m in movies.results) {
-                var movie = movies.results[m],
-                    tdiv = template.clone(),
-                    poster = movie.poster_path,
-                    image = (poster != null) ? imgeBase+poster : notFound;
-
-                if (movie.poster_path != null) {
-                    tdiv.find(".poster").attr({
-                        "src": image,
-                        "data": m
-                    });
-                    searchResults.append(tdiv).show("slow");
-                }
-
-                /* this is a table format for results
-                var movie = movies.results[m],
-                    tr = template.clone(),
-                    title = movie.title,
-                    plot = movie.overview,
-                    poster = movie.poster_path,
-                    image = (poster != null) ? imgeBase+poster : notFound,
-                    release = movie.release_date;
-
-                    if (movie.overview != '' && movie.release_date != '' && movie.poster_path != null) {
-                        tr.find(".title").html(title);
-                        tr.find(".plot").html(plot);
-                        tr.find(".poster").attr({
-                            src: image,
-                            data: m
+                    if (movie.poster_path != null) {
+                        tplt.find(".poster").attr({
+                            "src": image,
+                            "title": title,
+                            "data": m
                         });
-                        tr.find(".release").html(release);
-                        tbody.append(tr);
+                        searchResults.append(tplt);
                     }
-                    */
+                }
+                setPopupInformation(movies);
+                $(".search-results").show('slow', function() {
+                    $(".search-results").jScrollPane();
+                    $("#bodyRow").animate({"margin-top": "345px"});
+                });
             }
-            setPopupInformation(movies);
         }
 
-        function setPopupInformation(movies) {
-
-
+        function setPopupInformation(movies)
+        {
             $(".poster").click(function(){
 
                 movieNum = $(this).attr("data");
@@ -91,15 +83,16 @@
                 {
                     var template = $("<div>"),
                         image = (movie.poster_path != null) ? imgeBsBg+movie.poster_path : notFound,
-                        message = new PopupMessage();
+                        moviePop = new PopupMessage();
 
                     template.html(html);
                     template.find("#mTitle").html(movie.title);
                     template.find("#mPlot").html(movie.overview);
                     template.find("#mImage").attr("src", image);
                     template.find("#mRelease").html(movie.release_date);
+                    template.find("#mScore").html(movie.vote_average);
 
-                    message.init({
+                    moviePop.init({
                         title: 'TMDB - The Movie Database',
                         message: template.html(),
                         button: 'Dismiss',
@@ -115,5 +108,11 @@
             layoutMode: 'packery',
             percentPosition: true
         });
-    }
+
+        /* re-initialize the scroll-pane when resizing the window*/
+        $(window).bind('resize', function() {
+            $(".search-results").jScrollPane();
+        });
+
+    } //end of init()
 })();

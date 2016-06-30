@@ -48,8 +48,10 @@
                        <ul class="nav navbar-nav">
                            <li tal:condition="true:resHL" class="active"><a href="resume.php">Digital Resume</a></li>
                            <li tal:condition="not:resHL"><a href="resume.php">Digital Resume</a></li>
-                           <!-- <li tal:condition="true:dskHL" class="active"><a href="dDesk.php">Developer's Desk</a></li>
-                           <li tal:condition="not:dskHL"><a href="dDesk.php">Developer's Desk</a></li> -->
+                           <!--
+                           <li tal:condition="true:dskHL" class="active"><a href="dDesk.php">Developer's Desk</a></li>
+                           <li tal:condition="not:dskHL"><a href="dDesk.php">Developer's Desk</a></li>
+                           -->
                            <li tal:condition="true:intHL" class="dropdown active">
                               <tal:block metal:use-macro="interestMenu" />
                            </li>
@@ -60,9 +62,10 @@
                        </ul>
                    </div><!--/.nav-collapse -->
                </div>
+               <tal:block tal:condition="true:movieSearch" metal:use-macro="tmdbMovieSearch" />
            </nav>
          </div>
-         <div class="row">
+         <div id="bodyRow" class="row">
             <!-- PHPTAL inserts subtemplate content below this point -->
             <tal:block tal:content="structure body" />
          </div>
@@ -110,4 +113,31 @@
       <li><a href="gearhead.php">Gear Head</a></li>
       <li><a href="movies.php">Movies</a></li>
    </ul>
+</tal:block>
+<tal:block metal:define-macro="tmdbMovieSearch">
+    <div id="searchContainer">
+        <section class="search">
+            <div class="search-box">
+                <form class="search-form" autocomplete="off">
+                    <span class="glyphicon glyphicon-search xl"></span>
+                    <input id="movieTitle" type="text" tabindex="2" autocomplete="off"
+                        placeholder="Search for a Movie Title..." />
+                </form>
+            </div>
+        </section>
+        <section class="not-found">
+            <p>No results were found, please check your spelling and try again.</p>
+        </section>
+        <section class="search-results">
+            <table id="movieSearch">
+                <tbody>
+                    <tr id="searchResults">
+                        <td id="template">
+                            <img class="poster" src="" data="" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
 </tal:block>

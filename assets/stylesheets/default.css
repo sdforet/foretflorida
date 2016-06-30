@@ -38,7 +38,6 @@ h1 {
 .navbar-inverse {
     border-color: #FFF056;
     font-size: 1.2em;
-    font-weight: 600;
 }
 .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
     text-shadow: none;
@@ -147,49 +146,4 @@ label.control-label span {
         top: -16px;
         border-top-right-radius: 0;
     }
-}
-/* search bar */
-section.search {
-    width: 100%;
-    background-color: #fff;
-    height: 30px;
-    transition: 0.5s ease;
-    border-bottom: 1px solid #dedede;
-    align-items: center;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    -ms-flex-align: center;
-}
-section.search div.search-box {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding-left: 10px;
-    padding-top: 5px;
-    margin: 0 auto;
-}
-section.search form span.glyphicon {
-    pointer-events: none;
-    color: #acacac;
-    transition: 0.2s ease;
-}
-section.search form input[type=text] {
-    width: 90%;
-    border: none;
-    outline: none;
-    font-style: italic;
-    font-weight: 400;
-    padding-left: 5px;
-    color: #acacac;
-    transition: 0.5s ease;
-}
-section.search form input[type=submit] {
-    display: none;
 }
