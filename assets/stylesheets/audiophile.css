@@ -44,7 +44,7 @@ img.surround-speaker {
 img.sub-back {
    width: 420px
 }
-img.pioneer-rcvr {
+img.rcvr {
    width: 300px;
 }
 img.oppo-blu {
@@ -53,7 +53,7 @@ img.oppo-blu {
 .sub-left, .sub-right {
    margin-top: 40px;
 }
-.pioneer-rcvr, .oppo-blu, .svs-ultra-bk, .emotiva {
+.rcvr, .oppo-blu, .svs-ultra-bk, .emotiva {
    margin-right: 25px;
 }
 .svs-ultra-bk, .emotiva {
